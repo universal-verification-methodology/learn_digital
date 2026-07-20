@@ -1,0 +1,53 @@
+{
+  "module": "module27-reset-timelines",
+  "title": "Reset timelines check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Synchronous reset is typically…",
+      "choices": [
+        "sampled only on the clock edge",
+        "sensitive to rst_n with no clock",
+        "the same as $finish",
+        "analog only"
+      ],
+      "answer": 0,
+      "explain": "if (!rst_n) inside @(posedge clk)."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "If rst_n falls between clock edges…",
+      "choices": [
+        "async can clear immediately; sync waits for posedge",
+        "both always ignore reset",
+        "sync always clears first",
+        "the clock stops forever"
+      ],
+      "answer": 0,
+      "explain": "Starter mid-cycle divergence."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "rst_n naming usually means…",
+      "choices": [
+        "active-low reset — clear when rst_n is 0",
+        "reset never asserts",
+        "reset is LVDS only",
+        "the net is undriven Z"
+      ],
+      "answer": 0,
+      "explain": "n = negative/active-low."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Starter: after mid-cycle reset, async q=0 while sync q=1.",
+      "answer": true,
+      "explain": "Async clears now; sync waits."
+    }
+  ]
+}

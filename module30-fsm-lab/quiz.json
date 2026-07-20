@@ -1,0 +1,53 @@
+{
+  "module": "module30-fsm-lab",
+  "title": "FSM designer check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Moore machine outputs depend on…",
+      "choices": [
+        "Current state only",
+        "State and input together",
+        "Next state name only",
+        "Reset polarity"
+      ],
+      "answer": 0,
+      "explain": "Z is tied to the state node."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Mealy outputs depend on…",
+      "choices": [
+        "Current state and current input",
+        "State only",
+        "FIFO depth",
+        "Clock duty cycle"
+      ],
+      "answer": 0,
+      "explain": "Z is on the transition arc."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Moore toggle starter: x=1 does what?",
+      "choices": [
+        "Flips state (S0↔S1)",
+        "Always resets to S0",
+        "Ignores input",
+        "Sets Z without changing state"
+      ],
+      "answer": 0,
+      "explain": "x=1 toggles; x=0 holds."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Stepping applies one input bit per step and updates state/Z.",
+      "answer": true,
+      "explain": "Like one clock cycle per bit."
+    }
+  ]
+}

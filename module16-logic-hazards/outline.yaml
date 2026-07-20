@@ -1,12 +1,65 @@
-# Module 16 outline
-title: "Logic hazards"
-kind: lab
-lab: logic-hazards
+title: Logic hazards
+footer: learn_digital — logic hazards
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Logic hazards
+  subtitle: Combinational logic can glitch when inputs change
+  notes: Combinational logic can glitch when inputs change. A static-one hazard dips
+    to zero while the function should stay one. A static-zero hazard spikes high while
+    output should stay zero. Dynamic hazards add extra transitions. This module makes
+    run, see, and cover hazards concrete.
+- type: bullets
+  title: One input moves, paths differ
+  bullets:
+  - Hazard analysis usually changes one input at a time
+  - Different path delays let one SOP term drop before another picks up
+  - A consensus term that bridges adjacent cubes, like B C here, can cover the gap
+  - Equal delays can hide the glitch in simulation but not in silicon
+  notes: Hazard analysis usually changes one input at a time. Different path delays
+    let one SOP term drop before another picks up—classic static-one on A B plus A-prime
+    C when A falls with B and C held at one. A consensus term that bridges adjacent
+    cubes—like B C here—can cover the gap. Equal delays can hide the glitch in simulation
+    but not in silicon.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Logic hazards starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the circuit
+    and timing trace, and Run or Apply cover controls. Load the starter for A B plus
+    A-prime C with A going one to zero and B equals C equals one. Run the transition
+    and watch a static-one verdict. Apply consensus cover with B C and rerun for a
+    safe steady one. Try static-zero and dynamic presets too. Use Check when a challenge
+    looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track
+  - Write the consensus term B C by hand
+  - Name static-one versus static-zero from the dip or spike direction
+  - 'Note one pitfall: assuming equal gate delays means no hazard in real hardware'
+  notes: 'In the workbook track, sketch why A B and A-prime C both cover ABC when
+    A is one, but only B C holds when A is zero. Write the consensus term B C by hand.
+    Name static-one versus static-zero from the dip or spike direction. Note one pitfall:
+    assuming equal gate delays means no hazard in real hardware.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse a hazard with wrong logic
+  - Cover terms must actually bridge the risky transition
+  - 'And remember: the browser lab is literacy'
+  - Real designs still need timing analysis
+  notes: 'Do not confuse a hazard with wrong logic—the truth table can be correct
+    while timing glitches. Cover terms must actually bridge the risky transition.
+    And remember: the browser lab is literacy. Real designs still need timing analysis,
+    registers, or hazard-free encodings where glitches matter.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, identify one static hazard and one consensus fix
+  - When you are ready, take the short quiz, then continue to gate composer
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, identify one static hazard
+    and one consensus fix. When you are ready, take the short quiz, then continue
+    to gate composer.

@@ -1,12 +1,64 @@
-# Module 17 outline
-title: "Gate composer"
-kind: lab
-lab: gate-composer
+title: Gate composer
+footer: learn_digital — gate composer
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Gate composer
+  subtitle: Boolean functions become gate networks, AND, OR, NOT, and friends wired
+    together
+  notes: 'Boolean functions become gate networks—AND, OR, NOT, and friends wired together.
+    The composer evaluates your net against a truth table row by row. Start simple:
+    one AND for F equals A and B. Then build XOR, majority, mux, or full-adder bits
+    from the same palette. This module makes compose and verify concrete.'
+- type: bullets
+  title: Wire, probe, check
+  bullets:
+  - Place gates, connect inputs A through D, and read output F on every row
+  - NAND is NOT of AND; XOR is one when inputs differ
+  - A two-to-one mux selects B or C under A
+  - Full-adder sum is A xor B xor Cin; carry-out is majority
+  - The truth table is the judge, if every row matches, the net is correct
+  notes: Place gates, connect inputs A through D, and read output F on every row.
+    NAND is NOT of AND; XOR is one when inputs differ. A two-to-one mux selects B
+    or C under A. Full-adder sum is A xor B xor Cin; carry-out is majority. The truth
+    table is the judge—if every row matches, the net is correct.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Gate composer starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the gate
+    canvas and net list, and the truth-table probe. Load the starter—a single AND
+    for F equals A and B. Confirm row one-one is the only F equals one. Pick a challenge
+    like XOR or majority and add gates until all rows pass. Use Check when the table
+    looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, sketch a two-input XOR from AND, OR
+  - Draw a three-input majority gate net
+  - Write the half-adder sum and carry as gate names
+  - 'Name one pitfall: a net that works on three rows but fails on the fourth'
+  notes: 'In the workbook track, sketch a two-input XOR from AND, OR, and NOT—or from
+    NAND only if you know the pattern. Draw a three-input majority gate net. Write
+    the half-adder sum and carry as gate names. Name one pitfall: a net that works
+    on three rows but fails on the fourth.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not leave inputs floating, every gate input must be tied
+  - Reusing the wrong polarity breaks active-high logic
+  - 'And remember: the browser lab is literacy'
+  - Real RTL still needs synthesis, timing, and test vectors beyond one truth table
+  notes: 'Do not leave inputs floating—every gate input must be tied. Reusing the
+    wrong polarity breaks active-high logic. And remember: the browser lab is literacy.
+    Real RTL still needs synthesis, timing, and test vectors beyond one truth table.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one small gate net and label wires
+  - When you are ready, take the short quiz, then continue to mux and decoder
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one small gate net and
+    label wires. When you are ready, take the short quiz, then continue to mux and
+    decoder.

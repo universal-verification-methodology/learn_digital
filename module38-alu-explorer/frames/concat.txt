@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-1.png'
+duration 32.64
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-2.png'
+duration 36.096
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-3.png'
+duration 20.184
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-4.png'
+duration 25.704
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-5.png'
+duration 23.184
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-6.png'
+duration 17.616
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module38-alu-explorer/frames/slide-6.png'

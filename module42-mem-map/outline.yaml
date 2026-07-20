@@ -1,12 +1,72 @@
-# Module 42 outline
-title: "RAM / ROM map"
-kind: lab
-lab: mem-map
+title: RAM / ROM map
+footer: learn_digital — mem map
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: RAM / ROM map
+  subtitle: Memory maps connect an address bus to stored words
+  notes: 'Memory maps connect an address bus to stored words. RAM allows read and
+    write at runtime—contents change under software or testbench control. ROM holds
+    a fixed image: reads work, but runtime writes are blocked. In simulation, both
+    often initialize from a hex dump using dollar-readmemh syntax. Address at-sign
+    sets the next load location; hex bytes fill sequential addresses. Here you have
+    sixteen eight-bit words—four address bits.'
+- type: bullets
+  title: DE AD BE EF starter
+  bullets:
+  - 'Starter: sixteen-by-eight RAM loaded from a readmemh-style dump'
+  - 'At address zero: hex DE, then AD, BE, EF'
+  - Read address zero gives data DE
+  - Read address three gives EF
+  - The grid shows every cell with at-sign and hex value
+  - Switch to ROM and try a write, the status reports blocked
+  notes: 'Starter: sixteen-by-eight RAM loaded from a readmemh-style dump. At address
+    zero: hex DE, then AD, BE, EF. Read address zero gives data DE. Read address three
+    gives EF. The grid shows every cell with at-sign and hex value. Switch to ROM
+    and try a write—the status reports blocked. RAM mode lets you write fifty-five
+    to address five and read it back. Load a dump with at-sign zero eight AA to place
+    AA at mem eight.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Memory map starter
+  notes: In the browser lab, pick RAM or ROM mode. Set address and data, then Read
+    or Write. The memory grid highlights the active cell—click a cell to select its
+    address. Edit the hex dump and Load readmemh to reinitialize. The bus bar shows
+    mode, address, data, and mem of addr. Try Read addr zero and Write in RAM versus
+    ROM.
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - On paper, draw a sixteen-word memory map with addresses zero through F
+  - Label starter bytes DE AD BE EF at zero through three
+  - Explain what at-sign zero A means in a readmemh file
+  - 'Tabulate RAM versus ROM: read allowed, write allowed, init method'
+  - 'Name one pitfall: confusing byte address order with big-endian multi-byte layout
+    elsewhere'
+  notes: 'On paper, draw a sixteen-word memory map with addresses zero through F.
+    Label starter bytes DE AD BE EF at zero through three. Explain what at-sign zero
+    A means in a readmemh file. Tabulate RAM versus ROM: read allowed, write allowed,
+    init method. Name one pitfall: confusing byte address order with big-endian multi-byte
+    layout elsewhere.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not assume ROM never changes, init load still programs the image in this lab
+  - At-sign sets address; following bytes fill upward sequentially
+  - Address bits are log two of depth, sixteen words need four bits, not eight
+  - And remember
+  notes: 'Do not assume ROM never changes—init load still programs the image in this
+    lab. At-sign sets address; following bytes fill upward sequentially. Address bits
+    are log two of depth—sixteen words need four bits, not eight. And remember: this
+    explorer is one word wide; real systems add byte enables and wider buses.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, read addr zero and three, then try a ROM-blocked write
+  - On paper, sketch one readmemh dump with at-sign and four data bytes
+  - When you are ready, take the short quiz, then continue to FIFO pointers
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    read addr zero and three, then try a ROM-blocked write. On paper, sketch one readmemh
+    dump with at-sign and four data bytes. When you are ready, take the short quiz,
+    then continue to FIFO pointers.

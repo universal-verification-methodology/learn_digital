@@ -1,0 +1,53 @@
+{
+  "module": "module16-logic-hazards",
+  "title": "Logic hazards check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Output should stay 1 but briefly dips to 0 — this is a…",
+      "choices": [
+        "static-0 hazard",
+        "static-1 hazard",
+        "dynamic hazard only",
+        "no hazard"
+      ],
+      "answer": 1,
+      "explain": "A glitch low while F should remain 1 is static-1."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Consensus cover for AB + A'C adds which bridging term?",
+      "choices": [
+        "AC",
+        "BC",
+        "AB",
+        "A'B'"
+      ],
+      "answer": 1,
+      "explain": "BC covers the cube shared when A changes."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Extra output transitions beyond the ideal single change indicate…",
+      "choices": [
+        "static-1",
+        "static-0",
+        "dynamic hazard",
+        "consensus"
+      ],
+      "answer": 2,
+      "explain": "Multiple edges on one input change = dynamic hazard."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Hazard analysis in this lab typically assumes one input changes at a time.",
+      "answer": true,
+      "explain": "Single-input transitions isolate path-delay glitches."
+    }
+  ]
+}

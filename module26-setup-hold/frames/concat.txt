@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-1.png'
+duration 27.096
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-2.png'
+duration 32.952
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-3.png'
+duration 24.408
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-4.png'
+duration 26.544
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-5.png'
+duration 20.616
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-6.png'
+duration 17.208
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module26-setup-hold/frames/slide-6.png'

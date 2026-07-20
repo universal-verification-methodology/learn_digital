@@ -1,23 +1,31 @@
-# Module 31 transcript — State encoding
+# Module 31 — State encoding
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module31-state-encoding  
+**Lab:** state-encoding  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — State encoding
 
-In digital design you will live in bits, gates, and timing. This module: **State encoding**.
+An FSM has abstract states S0, S1, S2—but silicon stores bit patterns in flip-flops. Binary encoding is compact: N states need ceiling log two N bits. One-hot uses N flip-flops with exactly one bit high—wider, but easy to decode. Gray codes assign indices so consecutive codes differ in exactly one bit—good for counters and ring steps. The choice trades area, speed, and glitch risk on transitions.
 
-## Teach
+## Slide 2 — Hamming distance and flips
 
-(3–5 sentences on the concept.)
+Starter: four states in binary—two flip-flops. Click S1 to S2 and Hamming distance is two—both bits flip. That matters because combinational decode can briefly see illegal intermediate codes. Switch to one-hot: four bits, one high; most arcs flip two bits but decode is a single wire. Switch to Gray: ring steps often have Hamming one. Yellow rows in the arc table flag multi-bit transitions.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `state-encoding`. Load the starter. Point at the UI.
+![State encoding starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, look at three pieces: the encoding tabs, the state code table, and the arc grid with Hamming distances. Load the starter—four states, binary. Compare one-hot and Gray, change state count, click an arc to see which bits flip. Use Check when a challenge looks done.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+In the workbook track, write binary codes for four states and mark Hamming distance on S0 to S1 versus S1 to S2. Sketch one-hot for three states. Explain why five states in three binary bits leaves unused codes—and what recovery rule you would add. Name one pitfall: multi-bit flips glitching state decode.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not assume binary is always best—compact codes can hazard decode. One-hot costs more FFs but simplifies “are we in S2?” checks. Unused binary codes need a default next-state, not hope. And remember: the browser lab is literacy. Real RTL still needs synthesis encoding hints and safe illegal-state recovery.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, finish a few challenges after the starter. On paper, draw one binary multi-flip arc and one Gray single-flip step. When you are ready, take the short quiz, then continue to the sequence detector.

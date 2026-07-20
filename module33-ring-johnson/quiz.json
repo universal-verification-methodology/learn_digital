@@ -1,0 +1,53 @@
+{
+  "module": "module33-ring-johnson",
+  "title": "Ring / Johnson check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Ring counter feedback (4-bit) is…",
+      "choices": [
+        "q[MSB] fed into q0",
+        "~q[MSB] fed into q0",
+        "Always 1",
+        "No feedback"
+      ],
+      "answer": 0,
+      "explain": "Circulate MSB into LSB."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Johnson counter feedback is…",
+      "choices": [
+        "Inverted MSB into q0",
+        "MSB unchanged into q0",
+        "XOR of all bits",
+        "Async reset only"
+      ],
+      "answer": 0,
+      "explain": "Twisted ring: ~q[MSB]."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Starter ring from 0001, one step gives…",
+      "choices": [
+        "0010",
+        "0001",
+        "1000",
+        "1111"
+      ],
+      "answer": 0,
+      "explain": "One-hot walks right."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "4-bit Johnson has useful period 8 (2N).",
+      "answer": true,
+      "explain": "Twisted ring visits 2N states."
+    }
+  ]
+}

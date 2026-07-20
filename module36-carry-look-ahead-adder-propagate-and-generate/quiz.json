@@ -1,0 +1,53 @@
+{
+  "module": "module36-carry-look-ahead-adder-propagate-and-generate",
+  "title": "Carry-lookahead G/P check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Generate Gᵢ is…",
+      "choices": [
+        "Aᵢ · Bᵢ",
+        "Aᵢ ⊕ Bᵢ",
+        "Aᵢ + Bᵢ",
+        "Cᵢ alone"
+      ],
+      "answer": 0,
+      "explain": "Forces carry when both inputs are 1."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Propagate Pᵢ (XOR form) is…",
+      "choices": [
+        "Aᵢ ⊕ Bᵢ",
+        "Aᵢ · Bᵢ",
+        "Always 0",
+        "Cᵢ ⊕ Cᵢ₊₁"
+      ],
+      "answer": 0,
+      "explain": "Passes Cin when G=0."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Recursive CLA carry is…",
+      "choices": [
+        "Cᵢ₊₁ = Gᵢ + Pᵢ·Cᵢ",
+        "Cᵢ₊₁ = Aᵢ ⊕ Bᵢ",
+        "Cᵢ₊₁ = Gᵢ · Pᵢ",
+        "Cᵢ₊₁ = Cᵢ only"
+      ],
+      "answer": 0,
+      "explain": "Generate or propagate path."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "If Gᵢ=1, then Cᵢ₊₁ is 1 regardless of Cᵢ.",
+      "answer": true,
+      "explain": "Generate dominates propagate."
+    }
+  ]
+}

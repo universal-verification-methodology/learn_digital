@@ -1,0 +1,53 @@
+{
+  "module": "module47-async-fifo",
+  "title": "Async FIFO (Gray) check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Why use Gray-coded pointers for CDC in an async FIFO?",
+      "choices": [
+        "Only one bit changes per count—safer to synchronize",
+        "Gray is faster than binary always",
+        "Gray removes the need for memory",
+        "Binary pointers are illegal in Verilog"
+      ],
+      "answer": 0,
+      "explain": "Avoid multi-bit CDC glitches."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter FIFO state is…",
+      "choices": [
+        "empty=1 (no data to read)",
+        "full=1",
+        "Both full and empty",
+        "Depth zero"
+      ],
+      "answer": 0,
+      "explain": "Cold empty FIFO."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Remote Gray pointers typically cross domains through…",
+      "choices": [
+        "Two flip-flop synchronizers (2FF)",
+        "A single XOR gate",
+        "Direct combinational wire",
+        "No synchronization"
+      ],
+      "answer": 0,
+      "explain": "Metastability hardening."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Write and read ports use independent clocks (wclk and rclk).",
+      "answer": true,
+      "explain": "Asynchronous FIFO definition."
+    }
+  ]
+}

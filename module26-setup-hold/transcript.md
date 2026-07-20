@@ -1,23 +1,31 @@
-# Module 26 transcript — Setup / hold
+# Module 26 — Setup / hold
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module26-setup-hold  
+**Lab:** setup-hold  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Setup / hold
 
-In digital design you will live in bits, gates, and timing. This module: **Setup / hold**.
+A flip-flop does not sample D at an instant—it needs setup time before the clock edge and hold time after. Setup means D must be stable for at least tsu before the capturing edge. Hold means D must not change for at least th after that edge. Clock-to-Q is how long until Q updates. Violate a window and capture becomes unreliable. This module makes the annotated timing diagram concrete.
 
-## Teach
+## Slide 2 — Windows, margins, Q delay
 
-(3–5 sentences on the concept.)
+Starter case: clean pass with comfortable margins. D settles at time fourteen, the edge is at twenty, tsu is two—setup deadline is eighteen, so setup passes. Data stays low through the hold window after the edge. Q moves at edge plus tcq. Drag D later into the red setup band and setup fails. Flip D too soon after the edge and hold fails. In a two-flop path, launch delay plus combo delay must fit inside the clock period minus setup at the capture flop.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `setup-hold`. Load the starter. Point at the UI.
+![Setup hold starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, look at three pieces: the challenge panel, the clk-D-Q timing diagram with green windows, and the tsu-th-tcq sliders. Load the starter—both setup and hold pass. Try the setup violation or hold violation presets. Drag the D transition or raise tsu to break a margin. Use Check when a challenge looks done.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+In the workbook track, draw one posedge with tsu and th bands on the D line. For edge at twenty, tsu two, D change at nineteen—does setup pass? For hold th one, D change at twenty point five—does hold pass? Sketch a two-FF path and label tcq, tpd, and tsu. Name one pitfall: changing D on the same cycle you expect Q to capture it.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not confuse this teaching diagram with full static timing analysis or SPICE. Setup and hold are flip-flop requirements—combo logic delay is separate. And remember: the browser lab is literacy. Real chips still need SDC constraints, corners, and sign-off tools beyond dragging one transition.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, finish a few challenges after the starter. On paper, mark setup and hold on one wave. When you are ready, take the short quiz, then continue to reset timelines.

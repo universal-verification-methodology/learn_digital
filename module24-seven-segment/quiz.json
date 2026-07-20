@@ -1,0 +1,53 @@
+{
+  "module": "module24-seven-segment",
+  "title": "Seven-segment check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A classic seven-segment digit has how many segments?",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "4"
+      ],
+      "answer": 1,
+      "explain": "Segments a through g."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter A (CC): which segment is off?",
+      "choices": [
+        "a",
+        "d",
+        "g",
+        "b"
+      ],
+      "answer": 1,
+      "explain": "1110111 — d is 0."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Common-cathode: segment ON is driven at…",
+      "choices": [
+        "0",
+        "1",
+        "Z",
+        "X"
+      ],
+      "answer": 1,
+      "explain": "1 = ON for CC."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Common-anode drive = NOT(common-cathode pattern) for the same glyph.",
+      "answer": true,
+      "explain": "Polarity inverts the bus."
+    }
+  ]
+}

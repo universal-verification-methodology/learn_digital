@@ -1,12 +1,73 @@
-# Module 38 outline
-title: "ALU explorer"
-kind: lab
-lab: alu-explorer
+title: ALU explorer
+footer: learn_digital — alu explorer
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: ALU explorer
+  subtitle: An arithmetic logic unit takes two operands, an opcode, and produces a
+    result plus condition flags
+  notes: 'An arithmetic logic unit takes two operands, an opcode, and produces a result
+    plus condition flags. Opcode selects the function—add, subtract, AND, OR, XOR,
+    shift, compare. The datapath is shared; control wires pick which hardware runs.
+    Flags summarize the outcome: Z when Y is zero, N from the MSB, C for carry or
+    borrow, V for signed overflow on add or sub. This module steps a four-bit ALU
+    and reads flags after each operation.'
+- type: bullets
+  title: ADD five plus three starter
+  bullets:
+  - 'Starter: four-bit ADD, A equals five, B equals three'
+  - Result Y is one-zero-zero-zero binary
+  - 'Flags: Z zero, N one, C zero, V zero'
+  - Switch opcode to SUB, AND, or SLT and watch Y and flags change
+  - On ADD, C equals one means unsigned carry out
+  - On SUB, C equals one means no borrow
+  notes: 'Starter: four-bit ADD, A equals five, B equals three. Result Y is one-zero-zero-zero
+    binary—eight unsigned, minus eight signed in four bits because the MSB is set.
+    Flags: Z zero, N one, C zero, V zero. Switch opcode to SUB, AND, or SLT and watch
+    Y and flags change. On ADD, C equals one means unsigned carry out. On SUB, C equals
+    one means no borrow. V lights up when signed add or sub overflows the representable
+    range.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: ALU explorer starter
+  notes: 'In the browser lab, look at three pieces: the opcode grid, the A and B bit
+    rows, and the Y plus Z-N-C-V flag strip. Load the starter—ADD with five and three.
+    Toggle bits, change width, try SLT versus SLT.S for signed compare. Use Check
+    when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, compute four-bit ADD five plus three and list Z, N, C,
+    V
+  - Do SUB three minus five and explain C equals zero
+  - AND twelve with three for zero and Z equals one
+  - Explain when unsigned SLT and signed SLT.S disagree on fifteen versus one
+  - 'Name one pitfall: reading C as signed overflow instead of V'
+  notes: 'In the workbook track, compute four-bit ADD five plus three and list Z,
+    N, C, V. Do SUB three minus five and explain C equals zero. AND twelve with three
+    for zero and Z equals one. Explain when unsigned SLT and signed SLT.S disagree
+    on fifteen versus one. Name one pitfall: reading C as signed overflow instead
+    of V.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not mix unsigned carry with signed overflow, C and V mean different things
+  - N is MSB of result, not a separate sign register
+  - Compare ops return zero or one in Y, not a full difference
+  - 'And remember: the browser lab is literacy'
+  - Real ALUs still need decode, timing, and ISA-specific flag rules
+  notes: 'Do not mix unsigned carry with signed overflow—C and V mean different things.
+    N is MSB of result, not a separate sign register. Compare ops return zero or one
+    in Y, not a full difference. And remember: the browser lab is literacy. Real ALUs
+    still need decode, timing, and ISA-specific flag rules.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, fill one opcode row with Y and flags
+  - When you are ready, take the short quiz, then continue to carry-select adder
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, fill one opcode row with
+    Y and flags. When you are ready, take the short quiz, then continue to carry-select
+    adder.

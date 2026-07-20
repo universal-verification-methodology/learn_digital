@@ -1,0 +1,53 @@
+{
+  "module": "module41-signed-arith",
+  "title": "Signed arithmetic check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "8-bit two's complement signed range is…",
+      "choices": [
+        "−128 … +127",
+        "0 … 255",
+        "−255 … +255",
+        "−64 … +63"
+      ],
+      "answer": 0,
+      "explain": "MSB is sign bit."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "100+100 in 8-bit signed add wraps to…",
+      "choices": [
+        "−56 with V=1",
+        "+200 with V=0",
+        "0 with Z=1",
+        "+100 unchanged"
+      ],
+      "answer": 0,
+      "explain": "True sum 200 out of signed range."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Flag V indicates…",
+      "choices": [
+        "Signed overflow",
+        "Unsigned carry only",
+        "Result is zero",
+        "MSB is zero"
+      ],
+      "answer": 0,
+      "explain": "Distinct from C."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "200+100 can set C=1 while V=0.",
+      "answer": true,
+      "explain": "Unsigned carry ≠ signed overflow."
+    }
+  ]
+}

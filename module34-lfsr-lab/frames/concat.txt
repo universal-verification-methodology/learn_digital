@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-1.png'
+duration 35.136
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-2.png'
+duration 32.448
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-3.png'
+duration 21.984
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-4.png'
+duration 24.216
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-5.png'
+duration 22.152
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-6.png'
+duration 18.696
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module34-lfsr-lab/frames/slide-6.png'

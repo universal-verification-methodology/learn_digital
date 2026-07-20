@@ -1,23 +1,31 @@
-# Module 40 transcript — Booth encode
+# Module 40 — Booth encode
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module40-booth-encode  
+**Lab:** booth-encode  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Booth encode
 
-In digital design you will live in bits, gates, and timing. This module: **Booth encode**.
+Radix-four Booth recodes the multiplier Y into signed digits zero, plus or minus one, or plus or minus two. Each digit comes from an overlapping three-bit triplet of Y, with y minus one equals zero for the first group. Partial product i is digit i times X, shifted left by two i. Eight-bit Y yields four digits—half as many partial products as a plain array multiplier. The trade is a Booth table and signed partial-product hardware.
 
-## Teach
+## Slide 2 — 0C times 1A starter
 
-(3–5 sentences on the concept.)
+Starter: X equals hex zero C, twelve signed; Y equals hex one A, twenty-six. Encode Y into four Booth digits: minus two, minus one, plus two, zero. Digit zero triplet one-zero-zero uses y minus one equals zero. Partial products: minus twenty-four, minus forty-eight, plus three eighty-four, zero. Booth sum and signed X times Y both equal three twelve. Click Encode Y to see the bit grid, digit cards, and partial-product list.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `booth-encode`. Load the starter. Point at the UI.
+![Booth encode starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, enter X and Y or load the starter. The bit grid shows overlapping groups and y minus one. Digit cards show each triplet and shift amount. Partial products list digit times X with contributions. Try Example with minus-two digit or Highlight zero-one-one to plus two. Status confirms digits and product match.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+On paper, encode Y equals one A into four radix-four Booth digits using the cheat table. For triplet zero-one-one, record digit plus two. Compute partial products for X equals twelve and sum them. Draw how triplets overlap—each group shares one bit with the next. Name one pitfall: forgetting y minus one on the first digit.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not treat Booth digits as plain binary—they are signed recoding. Triplet bits are y two i plus one, y two i, y two i minus one—not independent pairs. Partial products with minus one or minus two need signed X. And remember: this lab is concept literacy; real multipliers still need sign extension, rounding, and pipeline timing.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, encode the starter and confirm product three twelve. On paper, fill one row of the Booth table from a triplet you choose. When you are ready, take the short quiz, then continue to signed arithmetic.

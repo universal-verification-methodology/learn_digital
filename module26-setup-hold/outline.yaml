@@ -1,12 +1,70 @@
-# Module 26 outline
-title: "Setup / hold"
-kind: lab
-lab: setup-hold
+title: Setup / hold
+footer: learn_digital — setup hold
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Setup / hold
+  subtitle: A flip-flop does not sample D at an instant, it needs setup time before
+    the clock edge and hold time after
+  notes: A flip-flop does not sample D at an instant—it needs setup time before the
+    clock edge and hold time after. Setup means D must be stable for at least tsu
+    before the capturing edge. Hold means D must not change for at least th after
+    that edge. Clock-to-Q is how long until Q updates. Violate a window and capture
+    becomes unreliable. This module makes the annotated timing diagram concrete.
+- type: bullets
+  title: Windows, margins, Q delay
+  bullets:
+  - 'Starter case: clean pass with comfortable margins'
+  - D settles at time fourteen
+  - Data stays low through the hold window after the edge
+  - Q moves at edge plus tcq
+  - Drag D later into the red setup band and setup fails
+  - Flip D too soon after the edge and hold fails
+  notes: 'Starter case: clean pass with comfortable margins. D settles at time fourteen,
+    the edge is at twenty, tsu is two—setup deadline is eighteen, so setup passes.
+    Data stays low through the hold window after the edge. Q moves at edge plus tcq.
+    Drag D later into the red setup band and setup fails. Flip D too soon after the
+    edge and hold fails. In a two-flop path, launch delay plus combo delay must fit
+    inside the clock period minus setup at the capture flop.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Setup hold starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the clk-D-Q
+    timing diagram with green windows, and the tsu-th-tcq sliders. Load the starter—both
+    setup and hold pass. Try the setup violation or hold violation presets. Drag the
+    D transition or raise tsu to break a margin. Use Check when a challenge looks
+    done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, draw one posedge with tsu and th bands on the D line
+  - For edge at twenty, tsu two, D change at nineteen, does setup pass?
+  - For hold th one, D change at twenty point five, does hold pass?
+  - Sketch a two-FF path and label tcq, tpd, and tsu
+  - 'Name one pitfall: changing D on the same cycle you expect Q to capture it'
+  notes: 'In the workbook track, draw one posedge with tsu and th bands on the D line.
+    For edge at twenty, tsu two, D change at nineteen—does setup pass? For hold th
+    one, D change at twenty point five—does hold pass? Sketch a two-FF path and label
+    tcq, tpd, and tsu. Name one pitfall: changing D on the same cycle you expect Q
+    to capture it.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse this teaching diagram with full static timing analysis or SPICE
+  - Setup and hold are flip-flop requirements, combo logic delay is separate
+  - 'And remember: the browser lab is literacy'
+  - Real chips still need SDC constraints, corners
+  notes: 'Do not confuse this teaching diagram with full static timing analysis or
+    SPICE. Setup and hold are flip-flop requirements—combo logic delay is separate.
+    And remember: the browser lab is literacy. Real chips still need SDC constraints,
+    corners, and sign-off tools beyond dragging one transition.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, mark setup and hold on one wave
+  - When you are ready, take the short quiz, then continue to reset timelines
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, mark setup and hold on one
+    wave. When you are ready, take the short quiz, then continue to reset timelines.

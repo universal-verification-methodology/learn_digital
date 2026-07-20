@@ -1,0 +1,53 @@
+{
+  "module": "module45-dual-port-ram",
+  "title": "Dual-port RAM check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Dual-port RAM provides…",
+      "choices": [
+        "Two independent addr/we/din ports on one array",
+        "Two separate clock domains always",
+        "Read-only access on both ports",
+        "No address lines"
+      ],
+      "answer": 0,
+      "explain": "Shared memory, two ports."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter has ports on different addresses — that means…",
+      "choices": [
+        "Independent access (no collision)",
+        "Automatic X on both dout",
+        "Both ports must write",
+        "Memory clears to zero"
+      ],
+      "answer": 0,
+      "explain": "A=0, B=1 in starter."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "write_first policy on W/R collision means read port sees…",
+      "choices": [
+        "New (written) data",
+        "Always old data only",
+        "Always X",
+        "The write pointer"
+      ],
+      "answer": 0,
+      "explain": "Read-new after write."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Same address, both reading (R/R) is OK in this lab.",
+      "answer": true,
+      "explain": "No write conflict."
+    }
+  ]
+}

@@ -1,12 +1,66 @@
-# Module 25 outline
-title: "Clock-edge stepper"
-kind: lab
-lab: clock-stepper
+title: Clock-edge stepper
+footer: learn_digital — clock stepper
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Clock-edge stepper
+  subtitle: Sequential logic does not change on every input wiggle, it samples on
+    a clock edge
+  notes: Sequential logic does not change on every input wiggle—it samples on a clock
+    edge. A D flip-flop copies D into Q on each rising edge of clk. Poke the input
+    first, then step the clock—same rhythm as the HDL simulator toolbar. Registers,
+    counters, and shift chains are all edge-triggered blocks built from this idea.
+    This module makes posedge stepping concrete.
+- type: bullets
+  title: Poke, edge, capture
+  bullets:
+  - 'Starter lab: D flip-flop with a toggling clock'
+  - Set D to one, apply poke, then advance to posedge clk, Q becomes one
+  - Set D to zero and take another posedge, Q returns to zero
+  - Enable registers only capture when EN is high
+  - Counters increment on edge after reset clears
+  - A pipeline needs two edges before the second stage sees your bit
+  notes: 'Starter lab: D flip-flop with a toggling clock. Set D to one, apply poke,
+    then advance to posedge clk—Q becomes one. Set D to zero and take another posedge—Q
+    returns to zero. Enable registers only capture when EN is high. Counters increment
+    on edge after reset clears. A pipeline needs two edges before the second stage
+    sees your bit. The truth table records each poke and each edge in time order.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Clock stepper starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the signal
+    readout and truth table, and the poke fields with posedge button. Load the starter—D
+    flip-flop, poke D equals one, then posedge clk. Switch presets for enable, counter,
+    or shift register. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, sketch a D flip-flop timing diagram
+  - For an enable register with EN equals zero, say whether Q changes on posedge
+  - Draw two pipeline stages and label the one-cycle delay
+  - 'Name one pitfall: changing D and expecting Q to move before the clock edge'
+  notes: 'In the workbook track, sketch a D flip-flop timing diagram: D changes, then
+    posedge, then Q updates. For an enable register with EN equals zero, say whether
+    Q changes on posedge. Draw two pipeline stages and label the one-cycle delay.
+    Name one pitfall: changing D and expecting Q to move before the clock edge.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse level-sensitive latches with edge-triggered flops
+  - Reset and enable matter on the same edge as data
+  - 'And remember: the browser lab is literacy'
+  - Real designs still need setup, hold
+  notes: 'Do not confuse level-sensitive latches with edge-triggered flops—this lab
+    is edge-triggered. Reset and enable matter on the same edge as data. And remember:
+    the browser lab is literacy. Real designs still need setup, hold, and clock-domain
+    crossing rules beyond manual stepping.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one posedge capture wave
+  - When you are ready, take the short quiz, then continue to setup and hold
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one posedge capture
+    wave. When you are ready, take the short quiz, then continue to setup and hold.

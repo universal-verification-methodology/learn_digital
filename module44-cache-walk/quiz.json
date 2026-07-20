@@ -1,0 +1,53 @@
+{
+  "module": "module44-cache-walk",
+  "title": "Cache walk check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A cache address is commonly split into…",
+      "choices": [
+        "Tag, index (set), and offset (within line)",
+        "Opcode and funct only",
+        "Row and column of DRAM only",
+        "Byte enable alone"
+      ],
+      "answer": 0,
+      "explain": "Three-field decode."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter addr 0x14 (2 index / 2 offset bits): tag, index, offset…",
+      "choices": [
+        "1, 1, 0",
+        "0, 0, 0",
+        "2, 1, 0",
+        "1, 0, 4"
+      ],
+      "answer": 0,
+      "explain": "0001 01 00 binary split."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A hit requires…",
+      "choices": [
+        "Valid set and stored tag equals address tag",
+        "Only offset zero",
+        "Empty cache",
+        "Write-back always"
+      ],
+      "answer": 0,
+      "explain": "Valid plus tag match."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Two addresses with the same index but different tags can conflict in direct-mapped cache.",
+      "answer": true,
+      "explain": "Same set, different tags thrash."
+    }
+  ]
+}

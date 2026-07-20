@@ -1,0 +1,53 @@
+{
+  "module": "module42-mem-map",
+  "title": "RAM / ROM map check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In this lab, ROM mode means…",
+      "choices": [
+        "Runtime writes are rejected; init via readmemh load",
+        "Reads are illegal",
+        "Addresses are decimal only",
+        "DEPTH must be 1"
+      ],
+      "answer": 0,
+      "explain": "ROM blocks runtime writes."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter read at address 0 returns…",
+      "choices": [
+        "0xDE",
+        "0xEF",
+        "0x00",
+        "0xAD"
+      ],
+      "answer": 0,
+      "explain": "First byte of DE AD BE EF."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A 16-word memory needs how many address bits?",
+      "choices": [
+        "4",
+        "8",
+        "16",
+        "2"
+      ],
+      "answer": 0,
+      "explain": "log₂(16) = 4."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "RAM mode allows both read and write at runtime.",
+      "answer": true,
+      "explain": "Unlike ROM block on writes."
+    }
+  ]
+}

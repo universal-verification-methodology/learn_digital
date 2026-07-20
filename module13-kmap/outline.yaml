@@ -1,12 +1,66 @@
-# Module 13 outline
-title: "K-maps"
-kind: lab
-lab: kmap
+title: K-maps
+footer: learn_digital — kmap
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: K-maps
+  subtitle: A Karnaugh map lays truth-table ones on a grid so adjacent cells differ
+    by one bit
+  notes: A Karnaugh map lays truth-table ones on a grid so adjacent cells differ by
+    one bit. Group the ones into pairs, quads, or octets—edges wrap. The result is
+    a minimal sum-of-products without listing every row. This module makes fill, group,
+    and read SOP concrete.
+- type: bullets
+  title: Adjacent ones, bigger groups
+  bullets:
+  - Two-variable maps use Gray order on both axes
+  - 'Three and four variables add more cells but the same rule: circle the largest
+    legal groups'
+  - A group of four drops two literals
+  - Don’t-care X cells can join a group when they help
+  - Pick the minimal SOP when the challenge asks, one term per group
+  notes: 'Two-variable maps use Gray order on both axes. Three and four variables
+    add more cells but the same rule: circle the largest legal groups. A group of
+    four drops two literals. Don’t-care X cells can join a group when they help. Pick
+    the minimal SOP when the challenge asks—one term per group.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: K-map starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the Karnaugh
+    map grid, and variable or fill controls. Load the starter—a two-variable XOR pattern.
+    Toggle cells to match a prompt, or load a challenge map directly. Try a three-variable
+    majority or a wrap quad on four variables. Use Check when the map or SOP pick
+    looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, sketch a two-input XOR map by hand and write its SOP
+  - On three variables, group ones for at least two of A, B, or C
+  - Mark why top and bottom rows are neighbors on a four-var map
+  - 'Name one pitfall: grouping only in a straight line and missing a wrap-around
+    quad'
+  notes: 'In the workbook track, sketch a two-input XOR map by hand and write its
+    SOP. On three variables, group ones for at least two of A, B, or C. Mark why top
+    and bottom rows are neighbors on a four-var map. Name one pitfall: grouping only
+    in a straight line and missing a wrap-around quad.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not treat diagonal cells as adjacent, they are not
+  - A group must be a power-of-two size
+  - 'And remember: the browser lab is literacy'
+  - Real logic minimization still needs consistent variable order and don’t-care specs
+    from
+  notes: 'Do not treat diagonal cells as adjacent—they are not. A group must be a
+    power-of-two size. And remember: the browser lab is literacy. Real logic minimization
+    still needs consistent variable order and don’t-care specs from the design.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one map and circle the groups
+  - When you are ready, take the short quiz, then continue to SOP and POS
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one map and circle the
+    groups. When you are ready, take the short quiz, then continue to SOP and POS.

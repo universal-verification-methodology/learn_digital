@@ -1,23 +1,31 @@
-# Module 39 transcript — Carry-select sketch
+# Module 39 — Carry-select sketch
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module39-carry-select-adder  
+**Lab:** carry-select-adder  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Carry-select sketch
 
-In digital design you will live in bits, gates, and timing. This module: **Carry-select sketch**.
+Ripple carry waits for each stage before the next begins. Carry-select breaks the adder into blocks and speculates on the upper carry. The lower block computes the true lower sum and carry-out C4. The upper block runs two parallel four-bit adds—one with Cin zero, one with Cin one. When C4 arrives, a mux picks the correct upper sum. You trade extra hardware for shorter critical path on wide adders.
 
-## Teach
+## Slide 2 — A5 plus 3C starter
 
-(3–5 sentences on the concept.)
+Starter: eight-bit add, A equals hex A5, B equals hex three C. Lower nibble: five plus C gives sum one and C4 equals one. Upper dual paths: Cin zero gives D, Cin one gives E. Mux selects the Cin-one path because C4 is one. Final sum is hex E1, Cout zero. Step through phases—idle, dual paths, lower carry, mux select, done—to see speculation then selection.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `carry-select-adder`. Load the starter. Point at the UI.
+![Carry-select adder starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, watch three idea cards: speculate, select, why. Enter nibbles or load the starter. Use Next phase or Run all phases to animate lower carry feeding the mux. Status shows C4 and which path wins. Try Force case C4 equals zero versus one to see the mux flip.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+On paper, sketch an eight-bit carry-select built from two four-bit blocks. For A5 plus three C, compute lower sum and C4, both upper speculative sums, and the mux choice. Tabulate Cin zero versus Cin one paths. Name the trade-off: about double upper adder area plus mux, in exchange for hiding upper carry delay.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not confuse speculation with the final answer—the mux must wait for real C4. Both upper paths are computed in parallel; only one is selected. C4 is carry out of the lower nibble, not the full eight-bit Cout. And remember: this sketch teaches the idea; real wide CSAs use more blocks and tuned mux trees.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, run all phases on the starter and confirm sum E1. On paper, draw the dual upper paths and mux. When you are ready, take the short quiz, then continue to Booth encode.

@@ -1,0 +1,53 @@
+{
+  "module": "module34-lfsr-lab",
+  "title": "LFSR / PRBS check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "LFSR stands for…",
+      "choices": [
+        "Linear feedback shift register",
+        "Low-frequency signal router",
+        "Latch-free sequential reset",
+        "Logic fanout shift rule"
+      ],
+      "answer": 0,
+      "explain": "Shift + XOR taps."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Maximal n-bit LFSR period is…",
+      "choices": [
+        "2ⁿ−1",
+        "2ⁿ",
+        "n",
+        "n²"
+      ],
+      "answer": 0,
+      "explain": "All nonzero states once."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "All-zero seed on an LFSR…",
+      "choices": [
+        "Locks (feedback stays 0)",
+        "Gives maximal period",
+        "Doubles PRBS rate",
+        "Is required for PRBS"
+      ],
+      "answer": 0,
+      "explain": "Forbidden lock state."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "PRBS is a pseudo-random bit stream from the LFSR output.",
+      "answer": true,
+      "explain": "Often the shifted-out LSB."
+    }
+  ]
+}

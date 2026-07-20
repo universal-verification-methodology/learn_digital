@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-1.png'
+duration 29.616
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-2.png'
+duration 35.64
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-3.png'
+duration 22.896
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-4.png'
+duration 26.232
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-5.png'
+duration 19.656
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-6.png'
+duration 20.016
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module46-byte-enable-mem/frames/slide-6.png'

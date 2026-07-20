@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-1.png'
+duration 28.368
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-2.png'
+duration 29.64
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-3.png'
+duration 22.032
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-4.png'
+duration 22.632
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-5.png'
+duration 23.736
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-6.png'
+duration 18.84
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module43-fifo-lab/frames/slide-6.png'

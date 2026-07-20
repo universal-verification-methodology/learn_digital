@@ -1,0 +1,53 @@
+{
+  "module": "module18-mux-decoder",
+  "title": "Mux / decoder / encoder check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A 4:1 mux needs how many select bits?",
+      "choices": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "2^S = 4 inputs → S = 2 select bits."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A binary decoder’s outputs are typically…",
+      "choices": [
+        "all high at once",
+        "one-hot",
+        "always zero",
+        "Gray coded only"
+      ],
+      "answer": 1,
+      "explain": "Exactly one output active per address."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A 3→8 decoder has how many output lines?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^3 = 8 one-hot outputs."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Starter 2:1 mux with S=0, D0=1, D1=0 gives Y=1.",
+      "answer": true,
+      "explain": "S=0 passes D0 to Y."
+    }
+  ]
+}

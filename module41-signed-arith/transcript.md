@@ -1,23 +1,31 @@
-# Module 41 transcript — Signed arithmetic
+# Module 41 — Signed arithmetic
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module41-signed-arith  
+**Lab:** signed-arith  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Signed arithmetic
 
-In digital design you will live in bits, gates, and timing. This module: **Signed arithmetic**.
+Eight-bit two's complement treats the MSB as sign: range minus one twenty-eight through plus one twenty-seven. The same adder hardware works for unsigned and signed—you interpret flags differently. N is the result MSB. Z means zero. C is unsigned carry on add or not-borrow on subtract. V means signed overflow—the true sum or difference does not fit in eight signed bits. V and C are not the same flag.
 
-## Teach
+## Slide 2 — One hundred plus fifty starter
 
-(3–5 sentences on the concept.)
+Starter: add one hundred plus fifty in eight-bit two's complement. Wrapped byte is hex nine six; signed view is minus one oh six. Status panel shows true signed sum one fifty outside the eight-bit range. Flags include V equals one when same-sign operands produce a result with flipped sign bit. Compare with Example V equals one at one hundred plus one hundred—wraps to minus fifty-six. And Example C equals one V equals zero at two hundred plus one hundred—unsigned carry without signed overflow.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `signed-arith`. Load the starter. Point at the UI.
+![Signed arithmetic starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, enter A and B as decimal, hex, or binary. Pick add or subtract. Compute shows operands, wrapped result, and N-Z-C-V flags. Status compares wrapped result to true signed value. Try Demo C versus V to see carry and overflow diverge. Explain flags walks through two's complement wrap.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+On paper, add plus one hundred plus plus fifty and list wrapped hex, signed view, and V. Do one hundred plus one hundred and record minus fifty-six with V equals one. Do two hundred plus one hundred and note C equals one with V equals zero. Write the V rule for add: same sign in, different sign out. Name one pitfall: treating C as signed overflow.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not read wrapped bits as the true signed answer when V equals one. Subtract overflow uses a different V test than add—both mean out of range. Negative numbers use two's complement, not sign-magnitude in this lab. And remember: ISA manuals differ slightly on borrow versus carry naming—always check your architecture.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, run the starter and both overflow demos. On paper, fill one row with operands, wrapped result, true signed, and NZCV. When you are ready, take the short quiz, then continue to RAM and ROM map.

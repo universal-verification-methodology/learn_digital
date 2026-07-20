@@ -1,12 +1,69 @@
-# Module 19 outline
-title: "Priority & compare"
-kind: lab
-lab: priority-compare
+title: Priority & compare
+footer: learn_digital — priority compare
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Priority & compare
+  subtitle: When several requests arrive at once, a priority encoder picks one winner
+    and reports its index
+  notes: When several requests arrive at once, a priority encoder picks one winner
+    and reports its index. Enable-in and enable-out let you cascade blocks. A comparator
+    answers equal, greater-than, and less-than—but unsigned magnitude and signed two’s-complement
+    order can disagree on the same bit pattern. This module makes both ideas concrete.
+- type: bullets
+  title: Winner, flags, cascade
+  bullets:
+  - 'High-index-first: if I zero and I two are both set, the winner is two'
+  - Low-index-first would pick zero instead, priority is a design choice
+  - With all inputs zero and enable-in high
+  - Compare four-bit A and B
+  - Same bits can yield A greater unsigned but A less signed
+  notes: 'High-index-first: if I zero and I two are both set, the winner is two. Low-index-first
+    would pick zero instead—priority is a design choice. With all inputs zero and
+    enable-in high, valid is zero and enable-out asserts for the next encoder in a
+    chain. Compare four-bit A and B: unsigned treats every bit as magnitude; signed
+    treats the MSB as sign. Same bits can yield A greater unsigned but A less signed.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Priority compare starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the encoder
+    or comparator diagram, and the input toggles. Load the starter—a four-input priority
+    encoder, high-index-first, with I zero and I two set, so winner I two and Y equals
+    two. Switch to compare mode and try a signed versus unsigned disagree case. Use
+    Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track
+  - With enable-in high and no inputs active, state V and enable-out
+  - For four-bit A equals fifteen and B equals one, say unsigned and signed relational
+    results
+  - 'Name one pitfall: assuming comparator flags match without checking signed mode'
+  notes: 'In the workbook track, for I one and I three both set, give the winner high-index-first
+    and low-index-first. With enable-in high and no inputs active, state V and enable-out.
+    For four-bit A equals fifteen and B equals one, say unsigned and signed relational
+    results. Name one pitfall: assuming comparator flags match without checking signed
+    mode.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not mix up priority direction, high versus low index first changes the answer
+  - Enable-out is not “any input high”; it means no local winner while enable-in is
+    on
+  - 'And remember: the browser lab is literacy'
+  - Real buses still need timing, width agreement
+  notes: 'Do not mix up priority direction—high versus low index first changes the
+    answer. Enable-out is not “any input high”; it means no local winner while enable-in
+    is on. And remember: the browser lab is literacy. Real buses still need timing,
+    width agreement, and test vectors on both unsigned and signed views.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, sketch one priority case and one compare disagree case
+  - When you are ready, take the short quiz, then continue to half and full adder
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, sketch one priority case
+    and one compare disagree case. When you are ready, take the short quiz, then continue
+    to half and full adder.

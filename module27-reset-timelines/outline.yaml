@@ -1,12 +1,70 @@
-# Module 27 outline
-title: "Reset timelines"
-kind: lab
-lab: reset-timelines
+title: Reset timelines
+footer: learn_digital — reset timelines
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Reset timelines
+  subtitle: Reset puts a flip-flop into a known state, usually zero when rst_n is
+    low
+  notes: Reset puts a flip-flop into a known state—usually zero when rst_n is low.
+    Synchronous reset samples rst_n only on the clock edge, inside always posedge
+    clk. Asynchronous reset lists negedge rst_n in the sensitivity list and can clear
+    q between edges. Active-low rst_n means zero asserts reset. This module compares
+    both styles on one timeline.
+- type: bullets
+  title: Mid-cycle, edge, release
+  bullets:
+  - 'Starter scenario: drive D to one, take a posedge so both q_sync and q_async become
+    one'
+  - Assert rst_n low mid-cycle, the async flop clears immediately
+  - At a posedge with rst_n still low, both clear
+  - Release rst_n high, then capture new data on a later edge
+  - A short mid-cycle pulse may be ignored by sync reset if it ends before the sampling
+    edge
+  notes: 'Starter scenario: drive D to one, take a posedge so both q_sync and q_async
+    become one. Assert rst_n low mid-cycle—the async flop clears immediately; the
+    sync flop still reads one until the next posedge. At a posedge with rst_n still
+    low, both clear. Release rst_n high, then capture new data on a later edge. A
+    short mid-cycle pulse may be ignored by sync reset if it ends before the sampling
+    edge.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Reset timelines starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the dual
+    FF waveforms, and the poke and posedge controls. Load the starter—mid-cycle reset
+    with async cleared and sync still high. Run scenario scripts or step actions side
+    by side. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, sketch clk, rst_n
+  - Write the always block for each style
+  - For rst_n low at posedge, do both FFs end at zero?
+  - 'Name one pitfall: releasing async reset too close to a clock edge without recovery
+    time'
+  notes: 'In the workbook track, sketch clk, rst_n, and q for sync versus async when
+    reset falls between edges. Write the always block for each style. For rst_n low
+    at posedge, do both FFs end at zero? Name one pitfall: releasing async reset too
+    close to a clock edge without recovery time.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not assume sync and async behave the same off the edge
+  - Rst_n naming implies active low, not “never reset.” And remember
+  - Real SoCs still need reset trees, CDC
+  notes: 'Do not assume sync and async behave the same off the edge—this lab shows
+    the split on purpose. rst_n naming implies active low, not “never reset.” And
+    remember: the browser lab is literacy. Real SoCs still need reset trees, CDC,
+    and recovery or removal checks beyond this pair of toy FFs.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one mid-cycle reset wave
+  - When you are ready, take the short quiz, then continue to clock enable versus
+    gated clock
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one mid-cycle reset
+    wave. When you are ready, take the short quiz, then continue to clock enable versus
+    gated clock.

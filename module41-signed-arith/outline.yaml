@@ -1,12 +1,74 @@
-# Module 41 outline
-title: "Signed arithmetic"
-kind: lab
-lab: signed-arith
+title: Signed arithmetic
+footer: learn_digital — signed arith
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Signed arithmetic
+  subtitle: 'Eight-bit two''s complement treats the MSB as sign: range minus one twenty-eight
+    through plus one twenty-seven'
+  notes: 'Eight-bit two''s complement treats the MSB as sign: range minus one twenty-eight
+    through plus one twenty-seven. The same adder hardware works for unsigned and
+    signed—you interpret flags differently. N is the result MSB. Z means zero. C is
+    unsigned carry on add or not-borrow on subtract. V means signed overflow—the true
+    sum or difference does not fit in eight signed bits. V and C are not the same
+    flag.'
+- type: bullets
+  title: One hundred plus fifty starter
+  bullets:
+  - 'Starter: add one hundred plus fifty in eight-bit two''s complement'
+  - Wrapped byte is hex nine six; signed view is minus one oh six
+  - Status panel shows true signed sum one fifty outside the eight-bit range
+  - Flags include V equals one when same-sign operands produce a result with flipped
+    sign bit
+  - Compare with Example V equals one at one hundred plus one hundred
+  - And Example C equals one V equals zero at two hundred plus one hundred
+  notes: 'Starter: add one hundred plus fifty in eight-bit two''s complement. Wrapped
+    byte is hex nine six; signed view is minus one oh six. Status panel shows true
+    signed sum one fifty outside the eight-bit range. Flags include V equals one when
+    same-sign operands produce a result with flipped sign bit. Compare with Example
+    V equals one at one hundred plus one hundred—wraps to minus fifty-six. And Example
+    C equals one V equals zero at two hundred plus one hundred—unsigned carry without
+    signed overflow.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Signed arithmetic starter
+  notes: In the browser lab, enter A and B as decimal, hex, or binary. Pick add or
+    subtract. Compute shows operands, wrapped result, and N-Z-C-V flags. Status compares
+    wrapped result to true signed value. Try Demo C versus V to see carry and overflow
+    diverge. Explain flags walks through two's complement wrap.
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - On paper, add plus one hundred plus plus fifty and list wrapped hex, signed view,
+    and V
+  - Do one hundred plus one hundred and record minus fifty-six with V equals one
+  - Do two hundred plus one hundred and note C equals one with V equals zero
+  - 'Write the V rule for add: same sign in, different sign out'
+  - 'Name one pitfall: treating C as signed overflow'
+  notes: 'On paper, add plus one hundred plus plus fifty and list wrapped hex, signed
+    view, and V. Do one hundred plus one hundred and record minus fifty-six with V
+    equals one. Do two hundred plus one hundred and note C equals one with V equals
+    zero. Write the V rule for add: same sign in, different sign out. Name one pitfall:
+    treating C as signed overflow.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not read wrapped bits as the true signed answer when V equals one
+  - Subtract overflow uses a different V test than add, both mean out of range
+  - Negative numbers use two's complement, not sign-magnitude in this lab
+  - And remember
+  notes: 'Do not read wrapped bits as the true signed answer when V equals one. Subtract
+    overflow uses a different V test than add—both mean out of range. Negative numbers
+    use two''s complement, not sign-magnitude in this lab. And remember: ISA manuals
+    differ slightly on borrow versus carry naming—always check your architecture.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, run the starter and both overflow demos
+  - On paper, fill one row with operands, wrapped result, true signed, and NZCV
+  - When you are ready, take the short quiz, then continue to RAM and ROM map
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    run the starter and both overflow demos. On paper, fill one row with operands,
+    wrapped result, true signed, and NZCV. When you are ready, take the short quiz,
+    then continue to RAM and ROM map.

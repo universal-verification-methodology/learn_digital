@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-1.png'
+duration 25.848
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-2.png'
+duration 29.928
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-3.png'
+duration 21.168
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-4.png'
+duration 22.68
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-5.png'
+duration 18.744
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-6.png'
+duration 16.872
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module25-clock-stepper/frames/slide-6.png'

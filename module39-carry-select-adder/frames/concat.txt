@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-1.png'
+duration 28.176
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-2.png'
+duration 28.848
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-3.png'
+duration 21.384
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-4.png'
+duration 23.088
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-5.png'
+duration 21.936
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-6.png'
+duration 17.544
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module39-carry-select-adder/frames/slide-6.png'

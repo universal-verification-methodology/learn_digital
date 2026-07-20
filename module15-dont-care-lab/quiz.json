@@ -1,0 +1,53 @@
+{
+  "module": "module15-dont-care-lab",
+  "title": "Don't-care minimization check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Don't-care rows in a truth table are written as…",
+      "choices": [
+        "0",
+        "1",
+        "X",
+        "Z"
+      ],
+      "answer": 2,
+      "explain": "X marks combinations that may be treated as 0 or 1."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Every SOP cover must include all…",
+      "choices": [
+        "OFF minterms",
+        "ON minterms",
+        "X minterms only",
+        "maxterms"
+      ],
+      "answer": 1,
+      "explain": "ON (F=1) rows must be covered; OFF rows must not."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Using don't-cares in minimization typically…",
+      "choices": [
+        "Always increases term count",
+        "Can shrink the cover",
+        "Forces POS only",
+        "Ignores ON rows"
+      ],
+      "answer": 1,
+      "explain": "X can enlarge groups and drop literals."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A product term must never include an OFF (F=0) minterm.",
+      "answer": true,
+      "explain": "Covering a hard-zero row would change the function."
+    }
+  ]
+}

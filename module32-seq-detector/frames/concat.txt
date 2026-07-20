@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-1.png'
+duration 31.32
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-2.png'
+duration 29.04
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-3.png'
+duration 20.376
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-4.png'
+duration 23.928
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-5.png'
+duration 23.376
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-6.png'
+duration 18.744
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module32-seq-detector/frames/slide-6.png'

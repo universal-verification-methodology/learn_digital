@@ -1,0 +1,53 @@
+{
+  "module": "module13-kmap",
+  "title": "K-maps check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Adjacent K-map cells differ by how many bits?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "All bits"
+      ],
+      "answer": 1,
+      "explain": "Gray-code layout: neighbors change one variable."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Grouping four 1s in a K-map typically removes how many literals from the product term?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 2,
+      "explain": "A quad eliminates two variables in the grouped term."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Don’t-care cells (X) in a K-map…",
+      "choices": [
+        "Must always be 0",
+        "Can join groups if they help minimization",
+        "Force F to 1",
+        "Break all groups"
+      ],
+      "answer": 1,
+      "explain": "X can be treated as 0 or 1 to enlarge groups."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Edge cells on a K-map can wrap with opposite edges for grouping.",
+      "answer": true,
+      "explain": "Top/bottom and left/right neighbors include wrap-around."
+    }
+  ]
+}

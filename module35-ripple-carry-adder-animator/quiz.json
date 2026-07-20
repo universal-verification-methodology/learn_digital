@@ -1,0 +1,53 @@
+{
+  "module": "module35-ripple-carry-adder-animator",
+  "title": "Ripple-carry adder check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Full-adder sum bit is…",
+      "choices": [
+        "A ⊕ B ⊕ Cin",
+        "A & B & Cin",
+        "A | B",
+        "A ⊕ B only"
+      ],
+      "answer": 0,
+      "explain": "Three-input XOR."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "In ripple-carry, Cin of bit i comes from…",
+      "choices": [
+        "Cout of bit i−1 (LSB first)",
+        "Cout of the MSB",
+        "Always 1",
+        "The clock"
+      ],
+      "answer": 0,
+      "explain": "Carry chains upward."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Starter 4-bit 5+3, Cin=0 gives sum…",
+      "choices": [
+        "8, Cout 0",
+        "2, Cout 1",
+        "0, Cout 1",
+        "15, Cout 0"
+      ],
+      "answer": 0,
+      "explain": "0101 + 0011 = 1000."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Worst-case RCA delay grows roughly linearly with bit width.",
+      "answer": true,
+      "explain": "Carry must propagate the chain."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module": "module39-carry-select-adder",
+  "title": "Carry-select adder check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "An adder that muxes dual Cin paths is a…",
+      "choices": [
+        "Carry-select adder",
+        "Lookahead multiplier",
+        "Ring counter",
+        "ALU flag decoder"
+      ],
+      "answer": 0,
+      "explain": "Speculate then select on carry."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter A5+3C gives sum…",
+      "choices": [
+        "0xE1",
+        "0xA5",
+        "0x3C",
+        "0xFF"
+      ],
+      "answer": 0,
+      "explain": "Lower C4=1 picks Cin=1 upper path."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "The upper block computes how many speculative sums?",
+      "choices": [
+        "2 (Cin=0 and Cin=1)",
+        "1",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explain": "Dual parallel upper adds."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "C4 from the lower nibble selects which upper path the mux uses.",
+      "answer": true,
+      "explain": "Real carry picks Cin=0 vs Cin=1 sum."
+    }
+  ]
+}

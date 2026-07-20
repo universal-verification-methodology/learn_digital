@@ -1,0 +1,53 @@
+{
+  "module": "module23-barrel-shifter",
+  "title": "Barrel shifter check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "An 8-bit barrel shifter needs how many mux stages?",
+      "choices": [
+        "7",
+        "3",
+        "8",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "⌈log₂8⌉ = 3 power-of-two stages."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter: 0xD2 SLL by 3 → output?",
+      "choices": [
+        "0x90",
+        "0xD2",
+        "0x68",
+        "0xA4"
+      ],
+      "answer": 0,
+      "explain": "11010010 << 3 = 10010000 = 0x90."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Amount 3 enables which shift stages?",
+      "choices": [
+        "×1 and ×2",
+        "×1 only",
+        "×4 only",
+        "×1, ×2, and ×4"
+      ],
+      "answer": 0,
+      "explain": "3 = 1+2 → amt bits for stages 1 and 2."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Arithmetic right (SRA) replicates the sign bit into vacated positions.",
+      "answer": true,
+      "explain": "MSB fills on right shifts."
+    }
+  ]
+}

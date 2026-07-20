@@ -1,0 +1,53 @@
+{
+  "module": "module37-array-mult",
+  "title": "Array multiplier check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Each cell Aᵢ·Bⱼ in an unsigned array multiplier is…",
+      "choices": [
+        "AND of one A bit and one B bit",
+        "XOR only",
+        "A flip-flop",
+        "A carry lookahead cell"
+      ],
+      "answer": 0,
+      "explain": "Partial-product bit from AND."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Row for Bⱼ is shifted left by…",
+      "choices": [
+        "j bit positions",
+        "Always zero",
+        "N bits always",
+        "2N bits"
+      ],
+      "answer": 0,
+      "explain": "Matches bit weight of Bⱼ."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Starter 4-bit 5×3 gives product…",
+      "choices": [
+        "15",
+        "8",
+        "5",
+        "225"
+      ],
+      "answer": 0,
+      "explain": "0101 × 0011 = 1111."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "N-bit × N-bit unsigned product needs up to 2N bits.",
+      "answer": true,
+      "explain": "Worst case needs double width."
+    }
+  ]
+}

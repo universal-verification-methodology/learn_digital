@@ -1,0 +1,53 @@
+{
+  "module": "module20-half-full-adder",
+  "title": "Half / full adder check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Half-adder sum S is which function of A and B?",
+      "choices": [
+        "A AND B",
+        "A XOR B",
+        "A OR B",
+        "NOT A"
+      ],
+      "answer": 1,
+      "explain": "S = A⊕B."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "A full adder has how many inputs?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": 1,
+      "explain": "A, B, and Cin."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "HA is missing which input vs a full adder?",
+      "choices": [
+        "A",
+        "B",
+        "Cin",
+        "Cout"
+      ],
+      "answer": 2,
+      "explain": "Half adder has no carry-in."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Starter HA: A=1, B=1 → S=0, C=1.",
+      "answer": true,
+      "explain": "Binary 1+1: sum 0, carry 1."
+    }
+  ]
+}

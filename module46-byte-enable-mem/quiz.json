@@ -1,0 +1,53 @@
+{
+  "module": "module46-byte-enable-mem",
+  "title": "Byte-enable memory check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Byte-enable bits on write…",
+      "choices": [
+        "Gate which byte lanes update; others keep old data",
+        "Always clear the full word to zero",
+        "Select the CPU opcode",
+        "Disable the clock"
+      ],
+      "answer": 0,
+      "explain": "Partial store mask."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter word0 DDCCBBAA with be=0001 patches byte0 to…",
+      "choices": [
+        "0x55 (word becomes DDCCBB55)",
+        "0xAA unchanged",
+        "Full word 88776655",
+        "All zeros"
+      ],
+      "answer": 0,
+      "explain": "Only LSB lane from din."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "be=0011 stores…",
+      "choices": [
+        "Low halfword (two bytes)",
+        "MSB byte only",
+        "No bytes",
+        "All four words"
+      ],
+      "answer": 0,
+      "explain": "Lanes 0 and 1."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "we=1 with be=0000 changes no byte lanes.",
+      "answer": true,
+      "explain": "Mask all off."
+    }
+  ]
+}

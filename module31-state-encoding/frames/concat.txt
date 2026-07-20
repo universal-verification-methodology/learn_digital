@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-1.png'
+duration 30.792
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-2.png'
+duration 29.064
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-3.png'
+duration 19.8
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-4.png'
+duration 21.72
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-5.png'
+duration 23.28
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-6.png'
+duration 19.032
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module31-state-encoding/frames/slide-6.png'

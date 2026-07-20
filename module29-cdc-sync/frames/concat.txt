@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-1.png'
+duration 32.352
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-2.png'
+duration 32.4
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-3.png'
+duration 23.664
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-4.png'
+duration 24.048
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-5.png'
+duration 22.2
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-6.png'
+duration 18.744
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module29-cdc-sync/frames/slide-6.png'

@@ -1,23 +1,31 @@
-# Module 32 transcript — Sequence detector
+# Module 32 — Sequence detector
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module32-seq-detector  
+**Lab:** seq-detector  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Sequence detector
 
-In digital design you will live in bits, gates, and timing. This module: **Sequence detector**.
+A sequence detector is an FSM that watches a serial bit stream and raises Z when a target pattern appears. State S-k means the first k bits of the pattern have already matched. On a mismatch, you do not always reset to S0—you jump to the longest proper prefix that still fits. Mealy detectors pulse Z on the transition that completes the match. Moore detectors add a dedicated detect state where Z stays high. Overlap lets a suffix of one match seed the next.
 
-## Teach
+## Slide 2 — Detect 1011 starter
 
-(3–5 sentences on the concept.)
+Starter: Mealy overlapping detector for pattern one-zero-one-one. Step stream one-zero-one-one—Z goes zero, zero, zero, one on the last bit. States track matched prefix: empty, one, one-zero, one-zero-one. Toggle overlap off and see restart behavior. Switch to Moore and Z comes from the detect state instead of the arc. Try pattern one-one-zero-one or a longer stream with two overlapping matches.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `seq-detector`. Load the starter. Point at the UI.
+![Sequence detector starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, look at three pieces: the state row with prefix meanings, the transition table, and the bit-stream stepper with Z history. Load the starter—Mealy overlap on one-zero-one-one. Step one bit at a time, change pattern or style, watch the log. Use Check when a challenge looks done.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+In the workbook track, draw the Mealy state diagram for detecting one-zero-one-one with overlap. Fill the transition table for S2 on inputs zero and one. Explain what state you enter after a failed bit. Sketch one overlapping case: one-zero-one-one-one should match twice. Name one pitfall: forgetting overlap when the pattern repeats inside itself.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not confuse Mealy pulse timing with Moore level timing—downstream logic may care. Prefix recovery is not optional; brute-force reset wastes matches. Non-overlap mode is a different spec—know which you need. And remember: the browser lab is literacy. Real RTL still needs correct encoding, reset state, and test streams.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, finish a few challenges after the starter. On paper, draw one Mealy detect arc and one overlap restart. When you are ready, take the short quiz, then continue to ring and Johnson counters.

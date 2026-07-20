@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-1.png'
+duration 29.28
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-2.png'
+duration 31.296
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-3.png'
+duration 25.104
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-4.png'
+duration 24.72
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-5.png'
+duration 23.88
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-6.png'
+duration 19.248
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module45-dual-port-ram/frames/slide-6.png'

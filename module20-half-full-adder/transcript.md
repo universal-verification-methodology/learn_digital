@@ -1,23 +1,31 @@
-# Module 20 transcript — Half / full adder
+# Module 20 — Half / full adder
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module20-half-full-adder  
+**Lab:** half-full-adder  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Half / full adder
 
-In digital design you will live in bits, gates, and timing. This module: **Half / full adder**.
+Addition starts with a half adder: sum is A xor B, carry is A and B—but there is no carry-in, so it cannot sit alone in a multi-bit column. A full adder adds carry-in: sum is A xor B xor Cin, carry-out is majority of the three inputs. Two half adders plus an OR on the carries build a full adder. Chain full adders and you get ripple-carry addition. This module makes all three levels concrete.
 
-## Teach
+## Slide 2 — Sum, carry, chain
 
-(3–5 sentences on the concept.)
+Half adder truth: zero plus zero gives sum zero, carry zero; one plus one gives sum zero, carry one. Full adder with A, B, and Cin all one gives sum one and carry-out one—majority wins. Compose view: first HA on A and B yields S one and C one; second HA on S one and Cin yields sum one and another carry; Cout is C one or C two. Ripple two bits: FA zero adds the least column with Cin zero; FA one takes the carry into the next column.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `half-full-adder`. Load the starter. Point at the UI.
+![Half full adder starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, look at three pieces: the challenge panel, the adder diagram and truth table, and the input toggles. Load the starter—a half adder with A equals one, B equals one, so S equals zero and C equals one. Switch to full adder, compose, or ripple mode and hit Explain to see the step trace. Use Check when a challenge looks done.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+In the workbook track, fill the half-adder truth table for all four A-B pairs. For full adder A equals one, B equals zero, Cin equals one, give S and Cout. Sketch two half adders and an OR as one full adder. For two-bit ripple with A equals one-zero and B equals one-one, name S zero, S one, and final Cout. Name one pitfall: using a half adder where a column needs carry-in.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not confuse half-adder carry with full-adder carry-out—they solve different problems. Majority carry is not the same as HA carry alone when Cin is in play. And remember: the browser lab is literacy. Real adders still need timing, overflow flags, and faster carry schemes beyond naive ripple.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, finish a few challenges after the starter. On paper, draw one HA truth table and one FA from two HAs. When you are ready, take the short quiz, then continue to XOR parity tree.

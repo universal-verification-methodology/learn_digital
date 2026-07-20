@@ -1,0 +1,53 @@
+{
+  "module": "module25-clock-stepper",
+  "title": "Clock-edge stepper check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "D flip-flop: when does Q capture D?",
+      "choices": [
+        "Any time D changes",
+        "On posedge clk",
+        "On negedge clk only",
+        "When reset is low"
+      ],
+      "answer": 1,
+      "explain": "q <= d on posedge clk."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter workflow: poke D=1, then…",
+      "choices": [
+        "Q updates immediately",
+        "Advance posedge clk",
+        "Toggle reset only",
+        "Change clock period"
+      ],
+      "answer": 1,
+      "explain": "Poke first, then clock edge."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Enable register with EN=0 on posedge…",
+      "choices": [
+        "Q always follows D",
+        "Q holds (no capture)",
+        "Q toggles",
+        "Q becomes X"
+      ],
+      "answer": 1,
+      "explain": "if (en) q <= d — EN off holds."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "2-stage pipeline: D→Q2 needs two posedges after D changes.",
+      "answer": true,
+      "explain": "q1 <= d; q2 <= q1 — one cycle each."
+    }
+  ]
+}

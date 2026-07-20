@@ -1,0 +1,53 @@
+{
+  "module": "module17-gate-composer",
+  "title": "Gate composer check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "The starter example implements F as…",
+      "choices": [
+        "A OR B",
+        "A AND B",
+        "A XOR B",
+        "NOT A"
+      ],
+      "answer": 1,
+      "explain": "Starter is one AND gate: F = A & B."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Two-input XOR: F = 1 when…",
+      "choices": [
+        "A and B are equal",
+        "A and B differ",
+        "both are 1",
+        "both are 0"
+      ],
+      "answer": 1,
+      "explain": "XOR is 1 on rows 01 and 10."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "3-input majority: F = 1 when…",
+      "choices": [
+        "exactly one input is 1",
+        "at least two inputs are 1",
+        "all inputs are 0",
+        "parity is even"
+      ],
+      "answer": 1,
+      "explain": "Majority is 1 when two or three inputs are 1."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A correct gate net must match every row of the target truth table.",
+      "answer": true,
+      "explain": "The lab checks all input combinations."
+    }
+  ]
+}

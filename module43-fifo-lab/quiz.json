@@ -1,0 +1,53 @@
+{
+  "module": "module43-fifo-lab",
+  "title": "FIFO pointers check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "FIFO means…",
+      "choices": [
+        "First-In First-Out — oldest entry read next",
+        "First-In Last-Out (stack)",
+        "Random access like RAM",
+        "Only a clock generator"
+      ],
+      "answer": 0,
+      "explain": "Order-preserving queue."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter push 0xA5 on empty depth-4 FIFO: count becomes…",
+      "choices": [
+        "1 (wr=1, rd=0)",
+        "4 (full)",
+        "0 (empty)",
+        "2 always"
+      ],
+      "answer": 0,
+      "explain": "One entry stored at slot 0."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Full is true when…",
+      "choices": [
+        "count == DEPTH",
+        "count == 0",
+        "wr == 0 only",
+        "rd == wr always"
+      ],
+      "answer": 0,
+      "explain": "All slots occupied."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Pop while empty is blocked in this lab.",
+      "answer": true,
+      "explain": "Underflow protection."
+    }
+  ]
+}

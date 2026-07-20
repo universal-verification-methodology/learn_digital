@@ -1,23 +1,31 @@
-# Module 47 transcript — Async FIFO (Gray)
+# Module 47 — Async FIFO (Gray)
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module47-async-fifo  
+**Lab:** async-fifo  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Async FIFO (Gray)
 
-In digital design you will live in bits, gates, and timing. This module: **Async FIFO (Gray)**.
+A synchronous FIFO shares one clock. An async FIFO crosses clock domains: write on wclk, read on rclk. Pointers must not cross as binary—use Gray code so only one bit changes per step. Each side synchronizes the remote Gray pointer through two flip-flops. Empty compares read Gray to synced write Gray. Full compares next write Gray to synced read Gray with inverted MSBs. An extra pointer bit distinguishes full from empty when addresses wrap.
 
-## Teach
+## Slide 2 — Empty starter
 
-(3–5 sentences on the concept.)
+Starter: depth-eight FIFO, empty equals one, full equals zero. Write domain has wbin and wgray; read domain has rbin and rgray. Step wclk to write wdata hex A5 if not full—wbin advances, wgray updates. Remote rgray syncs through rq1 and rq2 into the write domain for full detection. Step rclk on the read side—wq1 and wq2 sync wgray for empty. After writes and sync settle, empty clears and a read returns the oldest byte. Demo write, sync, read walks the full path.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `async-fifo`. Load the starter. Point at the UI.
+![Async FIFO starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, step wclk and rclk independently. Memory strip shows write and read addresses. Flags show full, empty, and occupancy. Domain panels list binary and Gray pointers plus sync stages. Try Fill until full, Drain until empty, or Nudge both clks to let synchronizers settle. Show Gray table for bin-to-Gray mapping.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+On paper, compute Gray for binary zero through three. Draw write and read domains with two-FF synchronizers crossing between them. Explain why binary pointers are unsafe for CDC. Write the empty condition in words. Trace one write on wclk and when the read side can safely see not-empty.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not compare unsynchronized binary pointers across clocks. Empty and full can lag a few cycles after the other domain moves—that is intentional. Gray is required because multi-bit binary can glitch during CDC. And remember: this sketch is behavioral literacy; real FIFOs need reset, timing, and vendor-specific full-empty equations.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, write once, sync, read once, then fill and drain. On paper, list Gray codes for four binary values. When you are ready, take the short quiz, then continue to handshake valid-ready.

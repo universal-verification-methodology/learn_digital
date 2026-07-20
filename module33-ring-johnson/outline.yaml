@@ -1,12 +1,71 @@
-# Module 33 outline
-title: "Ring / Johnson"
-kind: lab
-lab: ring-johnson
+title: Ring / Johnson
+footer: learn_digital — ring johnson
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Ring / Johnson
+  subtitle: A shift register with feedback becomes a counter without a binary adder
+  notes: 'A shift register with feedback becomes a counter without a binary adder.
+    A ring counter feeds the MSB back into the LSB—the one-hot bit walks: zero-zero-zero-one
+    becomes zero-zero-one-zero, and so on. Period N for N bits with one-hot init.
+    A Johnson counter feeds inverted MSB—a twisted ring that visits two-N distinct
+    states from all-zero. Same shift chain, different feedback tap. This module steps
+    both and compares periods.'
+- type: bullets
+  title: Ring walk starter
+  bullets:
+  - 'Starter: ring mode with one-hot pattern zero-zero-zero-one'
+  - Step once and the one moves to zero-zero-one-zero
+  - Four steps complete a full ring period back to zero-zero-zero-one
+  - 'Switch to Johnson: load zero-zero-zero-zero, step eight times for the full two-N
+    cycle'
+  - Watch the feedback box, plain q-three for ring, not-q-three for Johnson
+  - Beware all-zero on a ring, it can lock with zero feedback forever
+  notes: 'Starter: ring mode with one-hot pattern zero-zero-zero-one. Step once and
+    the one moves to zero-zero-one-zero—feedback equals q-three, shift into q-zero.
+    Four steps complete a full ring period back to zero-zero-zero-one. Switch to Johnson:
+    load zero-zero-zero-zero, step eight times for the full two-N cycle. Watch the
+    feedback box—plain q-three for ring, not-q-three for Johnson. Beware all-zero
+    on a ring—it can lock with zero feedback forever.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Ring Johnson starter
+  notes: 'In the browser lab, look at three pieces: the feedback chain diagram, the
+    sequence strip, and the RTL snippet for each mode. Load the starter—ring one-hot
+    zero-zero-zero-one. Step, run full ring period, or try Johnson eight states. Use
+    Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, write the always block for ring versus Johnson feedback
+  - List four ring states starting from zero-zero-zero-one
+  - Count Johnson states for four bits, why two-N?
+  - Sketch what happens if a ring starts at all-zero
+  - 'Name one pitfall: invalid init or illegal states without recovery'
+  notes: 'In the workbook track, write the always block for ring versus Johnson feedback.
+    List four ring states starting from zero-zero-zero-one. Count Johnson states for
+    four bits—why two-N? Sketch what happens if a ring starts at all-zero. Name one
+    pitfall: invalid init or illegal states without recovery.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse display order, here q-three through q-zero is MSB left
+  - Ring needs valid one-hot init; Johnson needs the right reset
+  - Neither replaces a binary counter when you need full two-to-the-N counting
+  - 'And remember: the browser lab is literacy'
+  - Real designs still need timing, enable, and illegal-state handling
+  notes: 'Do not confuse display order—here q-three through q-zero is MSB left. Ring
+    needs valid one-hot init; Johnson needs the right reset. Neither replaces a binary
+    counter when you need full two-to-the-N counting. And remember: the browser lab
+    is literacy. Real designs still need timing, enable, and illegal-state handling.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one ring walk and one Johnson feedback inversion
+  - When you are ready, take the short quiz, then continue to LFSR and PRBS
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one ring walk and one
+    Johnson feedback inversion. When you are ready, take the short quiz, then continue
+    to LFSR and PRBS.

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-1.png'
+duration 30.336
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-2.png'
+duration 29.424
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-3.png'
+duration 23.592
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-4.png'
+duration 19.416
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-5.png'
+duration 20.232
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-6.png'
+duration 17.832
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module21-xor-parity-tree/frames/slide-6.png'

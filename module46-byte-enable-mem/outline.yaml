@@ -1,12 +1,72 @@
-# Module 46 outline
-title: "Byte-enable memory"
-kind: lab
-lab: byte-enable-mem
+title: Byte-enable memory
+footer: learn_digital — byte enable mem
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Byte-enable memory
+  subtitle: A thirty-two-bit word RAM can update one byte at a time using byte-enable
+    bits
+  notes: 'A thirty-two-bit word RAM can update one byte at a time using byte-enable
+    bits. Address selects the word; be zero through three each gate one lane on write.
+    Disabled lanes keep their old data—partial store without a full read-modify-write
+    on the bus. Little-endian layout: be zero is byte zero, the LSB. CPU byte, halfword,
+    and word stores map to different be patterns. We equals one with be all zero updates
+    nothing.'
+- type: bullets
+  title: be equals 0001 starter
+  bullets:
+  - 'Starter: four words by thirty-two bits'
+  - Word zero is hex DDCCBBAA, bytes AA, BB, CC, DD little-endian
+  - Set addr zero
+  - 'Step clock: only byte zero changes from AA to fifty-five'
+  - Word zero becomes DDCCBB55; BB, CC, DD unchanged
+  - Try be equals one-one-one-one for a full word, or zero-zero-one-one for a low
+    halfword
+  notes: 'Starter: four words by thirty-two bits. Word zero is hex DDCCBBAA—bytes
+    AA, BB, CC, DD little-endian. Set addr zero, we equals one, be equals zero-zero-zero-one,
+    din hex eight-eight-seven-seven-six-six-five-five. Step clock: only byte zero
+    changes from AA to fifty-five. Word zero becomes DDCCBB55; BB, CC, DD unchanged.
+    Try be equals one-one-one-one for a full word, or zero-zero-one-one for a low
+    halfword.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Byte-enable memory starter
+  notes: 'In the browser lab, set addr, we, din, and toggle be three down to zero.
+    Green highlights enabled lanes on the selected word. Step clk applies the masked
+    write. Sample dout reads mem of addr without writing. Buttons set common patterns:
+    LSB only, full word, halfword low, or be all zero.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - On paper, draw word zero with four byte lanes
+  - Mark be equals zero-zero-zero-one and din byte zero equals fifty-five
+  - Show the word before and after partial write
+  - Tabulate be patterns
+  - 'Name one pitfall: confusing be bit order with big-endian byte numbering'
+  notes: 'On paper, draw word zero with four byte lanes. Mark be equals zero-zero-zero-one
+    and din byte zero equals fifty-five. Show the word before and after partial write.
+    Tabulate be patterns: zero-zero-zero-one byte, zero-zero-one-one halfword, one-one-one-one
+    word, zero-zero-zero-zero no change. Name one pitfall: confusing be bit order
+    with big-endian byte numbering.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not assume we equals one always writes the full word, check be
+  - Disabled lanes are not zeroed; they retain old values
+  - Little-endian means be zero is the least significant byte
+  - And remember
+  notes: 'Do not assume we equals one always writes the full word—check be. Disabled
+    lanes are not zeroed; they retain old values. Little-endian means be zero is the
+    least significant byte. And remember: real systems also need alignment rules and
+    write strobes; this lab is lane-mask literacy.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, run the starter step and confirm only byte zero patches
+  - On paper, sketch one partial write with be equals zero-zero-one-one
+  - When you are ready, take the short quiz, then continue to async FIFO Gray pointers
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    run the starter step and confirm only byte zero patches. On paper, sketch one
+    partial write with be equals zero-zero-one-one. When you are ready, take the short
+    quiz, then continue to async FIFO Gray pointers.

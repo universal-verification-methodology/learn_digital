@@ -1,0 +1,53 @@
+{
+  "module": "module29-cdc-sync",
+  "title": "CDC / 2-FF sync check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "CDC stands for…",
+      "choices": [
+        "Clock-domain crossing",
+        "Clock duty cycle",
+        "Combinational delay check",
+        "Core debug console"
+      ],
+      "answer": 0,
+      "explain": "Signal crosses unrelated clocks."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Safe single-bit sync output should come from…",
+      "choices": [
+        "q2 (second dst flop)",
+        "q1 only",
+        "async_in directly",
+        "Source clock"
+      ],
+      "answer": 0,
+      "explain": "q2 samples after settle time."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Multi-bit CDC across unrelated clocks typically needs…",
+      "choices": [
+        "Gray code, handshake, or async FIFO",
+        "Classic 2-FF on each bit alone",
+        "No synchronizer at all",
+        "Only one dst flop"
+      ],
+      "answer": 0,
+      "explain": "Bits can skew on separate 2-FF paths."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "FF1 may be metastable after a bad sample near a clock edge.",
+      "answer": true,
+      "explain": "That is why we use q2 downstream."
+    }
+  ]
+}

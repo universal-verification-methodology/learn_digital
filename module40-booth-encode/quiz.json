@@ -1,0 +1,53 @@
+{
+  "module": "module40-booth-encode",
+  "title": "Booth encode check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Radix-4 Booth recodes the multiplier into digits…",
+      "choices": [
+        "0, ±1, or ±2",
+        "0 through 3 only",
+        "Binary 0–15 nibbles",
+        "Carry propagate bits"
+      ],
+      "answer": 0,
+      "explain": "Signed recoding, not ±3."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter 0C×1A (12×26) gives product…",
+      "choices": [
+        "312",
+        "26",
+        "12",
+        "0x1A"
+      ],
+      "answer": 0,
+      "explain": "Booth sum matches signed product."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Triplet 011 encodes to digit…",
+      "choices": [
+        "+2",
+        "0",
+        "−2",
+        "+1"
+      ],
+      "answer": 0,
+      "explain": "Standard radix-4 Booth table."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "8-bit Y yields four radix-4 Booth digits (n/2 partial products).",
+      "answer": true,
+      "explain": "Each digit covers two multiplier bits."
+    }
+  ]
+}

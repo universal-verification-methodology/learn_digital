@@ -1,0 +1,53 @@
+{
+  "module": "module32-seq-detector",
+  "title": "Sequence detector check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A sequence detector FSM recognizes…",
+      "choices": [
+        "A specific bit pattern in a serial stream",
+        "Only combinational AND gates",
+        "DRAM refresh timing",
+        "UART stop bits only"
+      ],
+      "answer": 0,
+      "explain": "Pattern in serial input."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter Mealy 1011: Z=1 when…",
+      "choices": [
+        "The last bit completes the pattern",
+        "Every input is 1",
+        "State is S0 only",
+        "Overlap is disabled"
+      ],
+      "answer": 0,
+      "explain": "Z on final matching bit."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Overlapping detection means…",
+      "choices": [
+        "A suffix of a match can start the next",
+        "Patterns never share bits",
+        "Z is always 0",
+        "Only Moore style works"
+      ],
+      "answer": 0,
+      "explain": "Reuse matched suffix."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "State Sₖ typically means the first k pattern bits matched.",
+      "answer": true,
+      "explain": "Prefix-length states."
+    }
+  ]
+}

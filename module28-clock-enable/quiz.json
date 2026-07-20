@@ -1,0 +1,53 @@
+{
+  "module": "module28-clock-enable",
+  "title": "Clock enable vs gated clock check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Preferred RTL style for conditional updates?",
+      "choices": [
+        "Clock enable (if ce) on free-running clk",
+        "Raw AND gate on clk always",
+        "No clock at all",
+        "Only async reset"
+      ],
+      "answer": 0,
+      "explain": "Clean clk; if (ce) q <= d."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "CE=0 on a clock-enable flop means…",
+      "choices": [
+        "q holds (no load)",
+        "q must toggle",
+        "clk stops globally",
+        "d drives q immediately"
+      ],
+      "answer": 0,
+      "explain": "Enable off → recycle/hold."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "AND-gated clk risk when ce changes while clk=1?",
+      "choices": [
+        "Glitch / spurious edge",
+        "Always safer than CE",
+        "Only affects reset",
+        "Impossible in simulation"
+      ],
+      "answer": 0,
+      "explain": "Raw AND can pulse clk_g."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "ICG latches enable when clk is low before AND-gating.",
+      "answer": true,
+      "explain": "Library cell avoids most AND glitches."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module": "module26-setup-hold",
+  "title": "Setup / hold check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Setup time (tsu) requires D to be stable…",
+      "choices": [
+        "for at least tsu before the capturing edge",
+        "only after the clock edge",
+        "only during reset",
+        "never — clocks are async"
+      ],
+      "answer": 0,
+      "explain": "Data must settle before the edge."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Hold time (th) requires D to stay stable…",
+      "choices": [
+        "for at least th after the capturing edge",
+        "only before power-up",
+        "for the whole period always",
+        "only on negedge forever"
+      ],
+      "answer": 0,
+      "explain": "No early change after the edge."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Clock-to-Q (tcq) is…",
+      "choices": [
+        "delay from capturing edge until Q updates",
+        "the same as setup time",
+        "a synthesis area report",
+        "the UART baud period"
+      ],
+      "answer": 0,
+      "explain": "Output propagation after the edge."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Starter clean pass: both setup and hold windows pass.",
+      "answer": true,
+      "explain": "D settles early; hold satisfied."
+    }
+  ]
+}

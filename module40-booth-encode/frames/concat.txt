@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-1.png'
+duration 28.584
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-2.png'
+duration 33.744
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-3.png'
+duration 23.904
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-4.png'
+duration 23.136
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-5.png'
+duration 24.096
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-6.png'
+duration 18.528
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module40-booth-encode/frames/slide-6.png'

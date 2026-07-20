@@ -1,12 +1,70 @@
-# Module 31 outline
-title: "State encoding"
-kind: lab
-lab: state-encoding
+title: State encoding
+footer: learn_digital — state encoding
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: State encoding
+  subtitle: An FSM has abstract states S0, S1, S2, but silicon stores bit patterns
+    in flip-flops
+  notes: 'An FSM has abstract states S0, S1, S2—but silicon stores bit patterns in
+    flip-flops. Binary encoding is compact: N states need ceiling log two N bits.
+    One-hot uses N flip-flops with exactly one bit high—wider, but easy to decode.
+    Gray codes assign indices so consecutive codes differ in exactly one bit—good
+    for counters and ring steps. The choice trades area, speed, and glitch risk on
+    transitions.'
+- type: bullets
+  title: Hamming distance and flips
+  bullets:
+  - 'Starter: four states in binary, two flip-flops'
+  - Click S1 to S2 and Hamming distance is two, both bits flip
+  - That matters because combinational decode can briefly see illegal intermediate
+    codes
+  - Switch to one-hot
+  - 'Switch to Gray: ring steps often have Hamming one'
+  - Yellow rows in the arc table flag multi-bit transitions
+  notes: 'Starter: four states in binary—two flip-flops. Click S1 to S2 and Hamming
+    distance is two—both bits flip. That matters because combinational decode can
+    briefly see illegal intermediate codes. Switch to one-hot: four bits, one high;
+    most arcs flip two bits but decode is a single wire. Switch to Gray: ring steps
+    often have Hamming one. Yellow rows in the arc table flag multi-bit transitions.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: State encoding starter
+  notes: 'In the browser lab, look at three pieces: the encoding tabs, the state code
+    table, and the arc grid with Hamming distances. Load the starter—four states,
+    binary. Compare one-hot and Gray, change state count, click an arc to see which
+    bits flip. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track
+  - Sketch one-hot for three states
+  - Explain why five states in three binary bits leaves unused codes
+  - 'Name one pitfall: multi-bit flips glitching state decode'
+  notes: 'In the workbook track, write binary codes for four states and mark Hamming
+    distance on S0 to S1 versus S1 to S2. Sketch one-hot for three states. Explain
+    why five states in three binary bits leaves unused codes—and what recovery rule
+    you would add. Name one pitfall: multi-bit flips glitching state decode.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not assume binary is always best, compact codes can hazard decode
+  - One-hot costs more FFs but simplifies “are we in S2?” checks
+  - Unused binary codes need a default next-state, not hope
+  - 'And remember: the browser lab is literacy'
+  - Real RTL still needs synthesis encoding hints and safe illegal-state recovery
+  notes: 'Do not assume binary is always best—compact codes can hazard decode. One-hot
+    costs more FFs but simplifies “are we in S2?” checks. Unused binary codes need
+    a default next-state, not hope. And remember: the browser lab is literacy. Real
+    RTL still needs synthesis encoding hints and safe illegal-state recovery.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one binary multi-flip arc and one Gray single-flip step
+  - When you are ready, take the short quiz, then continue to the sequence detector
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one binary multi-flip
+    arc and one Gray single-flip step. When you are ready, take the short quiz, then
+    continue to the sequence detector.

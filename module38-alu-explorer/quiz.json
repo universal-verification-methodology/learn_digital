@@ -1,0 +1,53 @@
+{
+  "module": "module38-alu-explorer",
+  "title": "ALU explorer check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "An ALU opcode primarily selects…",
+      "choices": [
+        "Which arithmetic/logic function to apply",
+        "The clock frequency",
+        "A memory address only",
+        "Reset polarity"
+      ],
+      "answer": 0,
+      "explain": "Control picks the datapath op."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter ADD 5+3: Y equals…",
+      "choices": [
+        "8 (1000₂)",
+        "2",
+        "15",
+        "0"
+      ],
+      "answer": 0,
+      "explain": "0101 + 0011 = 1000."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Flag Z is set when…",
+      "choices": [
+        "Y is zero",
+        "Carry occurred",
+        "MSB is 1",
+        "Opcode is SUB"
+      ],
+      "answer": 0,
+      "explain": "Zero result flag."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Flag V indicates signed overflow on ADD/SUB.",
+      "answer": true,
+      "explain": "Distinct from unsigned C."
+    }
+  ]
+}

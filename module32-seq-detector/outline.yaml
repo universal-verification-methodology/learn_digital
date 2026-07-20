@@ -1,12 +1,72 @@
-# Module 32 outline
-title: "Sequence detector"
-kind: lab
-lab: seq-detector
+title: Sequence detector
+footer: learn_digital — seq detector
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Sequence detector
+  subtitle: A sequence detector is an FSM that watches a serial bit stream and raises
+    Z when a target pattern appears
+  notes: A sequence detector is an FSM that watches a serial bit stream and raises
+    Z when a target pattern appears. State S-k means the first k bits of the pattern
+    have already matched. On a mismatch, you do not always reset to S0—you jump to
+    the longest proper prefix that still fits. Mealy detectors pulse Z on the transition
+    that completes the match. Moore detectors add a dedicated detect state where Z
+    stays high. Overlap lets a suffix of one match seed the next.
+- type: bullets
+  title: Detect 1011 starter
+  bullets:
+  - 'Starter: Mealy overlapping detector for pattern one-zero-one-one'
+  - Step stream one-zero-one-one, Z goes zero, zero, zero, one on the last bit
+  - 'States track matched prefix: empty, one, one-zero, one-zero-one'
+  - Toggle overlap off and see restart behavior
+  - Switch to Moore and Z comes from the detect state instead of the arc
+  - Try pattern one-one-zero-one or a longer stream with two overlapping matches
+  notes: 'Starter: Mealy overlapping detector for pattern one-zero-one-one. Step stream
+    one-zero-one-one—Z goes zero, zero, zero, one on the last bit. States track matched
+    prefix: empty, one, one-zero, one-zero-one. Toggle overlap off and see restart
+    behavior. Switch to Moore and Z comes from the detect state instead of the arc.
+    Try pattern one-one-zero-one or a longer stream with two overlapping matches.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Sequence detector starter
+  notes: 'In the browser lab, look at three pieces: the state row with prefix meanings,
+    the transition table, and the bit-stream stepper with Z history. Load the starter—Mealy
+    overlap on one-zero-one-one. Step one bit at a time, change pattern or style,
+    watch the log. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track
+  - Fill the transition table for S2 on inputs zero and one
+  - Explain what state you enter after a failed bit
+  - 'Sketch one overlapping case: one-zero-one-one-one should match twice'
+  - 'Name one pitfall: forgetting overlap when the pattern repeats inside itself'
+  notes: 'In the workbook track, draw the Mealy state diagram for detecting one-zero-one-one
+    with overlap. Fill the transition table for S2 on inputs zero and one. Explain
+    what state you enter after a failed bit. Sketch one overlapping case: one-zero-one-one-one
+    should match twice. Name one pitfall: forgetting overlap when the pattern repeats
+    inside itself.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse Mealy pulse timing with Moore level timing, downstream logic may
+    care
+  - Prefix recovery is not optional; brute-force reset wastes matches
+  - Non-overlap mode is a different spec, know which you need
+  - 'And remember: the browser lab is literacy'
+  - Real RTL still needs correct encoding, reset state, and test streams
+  notes: 'Do not confuse Mealy pulse timing with Moore level timing—downstream logic
+    may care. Prefix recovery is not optional; brute-force reset wastes matches. Non-overlap
+    mode is a different spec—know which you need. And remember: the browser lab is
+    literacy. Real RTL still needs correct encoding, reset state, and test streams.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one Mealy detect arc and one overlap restart
+  - When you are ready, take the short quiz, then continue to ring and Johnson counters
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one Mealy detect arc
+    and one overlap restart. When you are ready, take the short quiz, then continue
+    to ring and Johnson counters.

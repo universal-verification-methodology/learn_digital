@@ -1,12 +1,67 @@
-# Module 18 outline
-title: "Mux / decoder / encoder"
-kind: lab
-lab: mux-decoder
+title: Mux, decoder, encoder
+footer: learn_digital — mux decoder
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Mux, decoder, encoder
+  subtitle: A multiplexer picks one data input under select control, two inputs need
+    one select bit, four inputs need two
+  notes: A multiplexer picks one data input under select control—two inputs need one
+    select bit, four inputs need two. A decoder drives one hot outputs from a binary
+    address. An encoder compresses one hot back to a binary code, often with a valid
+    flag and priority on conflicts. This module makes all three directions concrete.
+- type: bullets
+  title: Select, one-hot, encode
+  bullets:
+  - 'Two-to-one mux: Y equals D zero when S is zero, D one when S is one'
+  - Four-to-one extends the select field
+  - A two-to-four decoder lights exactly one Y line for addr zero zero through one
+    one
+  - Priority encoder
+  - All inputs zero means V equals zero
+  notes: 'Two-to-one mux: Y equals D zero when S is zero, D one when S is one. Four-to-one
+    extends the select field. A two-to-four decoder lights exactly one Y line for
+    addr zero zero through one one. Priority encoder: if I one and I three are both
+    set, high-index-first may report three with V equals one. All inputs zero means
+    V equals zero.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Mux decoder starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the mux or
+    decoder or encoder diagram, and the input toggles. Load the starter—a two-to-one
+    mux with S equals zero, D zero equals one, D one equals zero, so Y equals one.
+    Switch modes to try a four-to-one mux, a two-to-four decoder, or an encoder challenge.
+    Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, write the two-to-one mux truth table by hand
+  - For addr one zero on a two-to-four decoder, say which Y line is high
+  - Encode only I three set and give Y and V
+  - 'Name one pitfall: confusing mux select width with decoder output count'
+  notes: 'In the workbook track, write the two-to-one mux truth table by hand. For
+    addr one zero on a two-to-four decoder, say which Y line is high. Encode only
+    I three set and give Y and V. Name one pitfall: confusing mux select width with
+    decoder output count.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not tie multiple decoder outputs high at once, that is not one-hot
+  - Encoder priority rules differ by design, know high versus low index first
+  - 'And remember: the browser lab is literacy'
+  - Real buses still need enables, tri-states, and timing on select changes
+  notes: 'Do not tie multiple decoder outputs high at once—that is not one-hot. Encoder
+    priority rules differ by design—know high versus low index first. And remember:
+    the browser lab is literacy. Real buses still need enables, tri-states, and timing
+    on select changes.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, sketch one mux and one decoder example
+  - When you are ready, take the short quiz, then continue to priority and compare
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, sketch one mux and one decoder
+    example. When you are ready, take the short quiz, then continue to priority and
+    compare.

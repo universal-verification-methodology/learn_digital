@@ -1,12 +1,69 @@
-# Module 29 outline
-title: "CDC / 2-FF sync"
-kind: lab
-lab: cdc-sync
+title: CDC / 2-FF sync
+footer: learn_digital — cdc sync
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: CDC / 2-FF sync
+  subtitle: When a signal crosses from one clock domain to another
+  notes: 'When a signal crosses from one clock domain to another, timing is not guaranteed—the
+    source can change while the destination flop is sampling. That is clock-domain
+    crossing, or CDC. The first flop in the destination domain may go metastable,
+    stuck between zero and one. A two-flop synchronizer gives one extra cycle to settle:
+    q1 samples async_in, q2 samples q1, and dst logic uses q2—not q1. This module
+    shows why that chain matters.'
+- type: bullets
+  title: Safe, unsafe, multi-bit
+  bullets:
+  - 'Starter: two-FF mode with async_in toggling and clk_dst stepping'
+  - After a near-edge sample, q1 may show M for metastable
+  - One-FF mode is unsafe, sync_out comes straight from q1
+  - Multi-bit misuse warns you
+  - Never fan q1 into combinational logic in the dst domain
+  notes: 'Starter: two-FF mode with async_in toggling and clk_dst stepping. After
+    a near-edge sample, q1 may show M for metastable; step again and q2 settles to
+    a clean zero or one. One-FF mode is unsafe—sync_out comes straight from q1. Multi-bit
+    misuse warns you: a bus cannot ride a classic two-FF chain; use Gray code, handshake,
+    or an async FIFO instead. Never fan q1 into combinational logic in the dst domain.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: CDC sync starter
+  notes: In the browser lab, look at the synchronizer chain diagram, the async-q1-q2
+    wave strip, and the RTL for each style. Load the starter—two-FF single-bit sync.
+    Try arm near-edge sample then step, or run the demo toggle-risk-two-steps. Switch
+    to one-FF or multi-bit misuse to see the warnings. Use Check when a challenge
+    looks done.
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, draw async_in, q1, q2, and sync_out across two dst clock
+    edges
+  - Write the always block for a two-FF synchronizer
+  - Explain why q2 is the safe output
+  - Sketch what goes wrong with one flop or with an eight-bit bus through two flops
+  - 'Name one pitfall: using q1 before it has settled'
+  notes: 'In the workbook track, draw async_in, q1, q2, and sync_out across two dst
+    clock edges. Write the always block for a two-FF synchronizer. Explain why q2
+    is the safe output. Sketch what goes wrong with one flop or with an eight-bit
+    bus through two flops. Name one pitfall: using q1 before it has settled.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not treat CDC as a timing exception you can ignore
+  - Two flops improve MTBF but do not make multi-bit buses safe
+  - 'And remember: the browser lab is literacy'
+  - Real designs still need CDC constraints, synchronizer cells
+  notes: 'Do not treat CDC as a timing exception you can ignore—metastability is probabilistic,
+    not impossible. Two flops improve MTBF but do not make multi-bit buses safe. And
+    remember: the browser lab is literacy. Real designs still need CDC constraints,
+    synchronizer cells, and proper protocols for data paths.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one two-FF settle wave and one multi-bit caution
+  - When you are ready, take the short quiz, then continue to the FSM designer lab
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one two-FF settle wave
+    and one multi-bit caution. When you are ready, take the short quiz, then continue
+    to the FSM designer lab.

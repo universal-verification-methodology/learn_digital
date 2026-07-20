@@ -1,12 +1,64 @@
-# Module 15 outline
-title: "Don’t-care minimization"
-kind: lab
-lab: dont-care-lab
+title: Don’t-care minimization
+footer: learn_digital — dont care lab
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Don’t-care minimization
+  subtitle: Some input combinations never happen, or the output does not matter when
+    they do
+  notes: Some input combinations never happen—or the output does not matter when they
+    do. Mark them X in the table. Minimize over ones you must cover; treat X as zero
+    or one if it helps. That can drop literals and terms compared to ignoring X. This
+    module makes with-X versus without-X covers concrete.
+- type: bullets
+  title: ON, OFF, and optional
+  bullets:
+  - Every product term must cover all ON minterms
+  - Cubes must never include an OFF row
+  - Don’t-care rows are optional, you choose zero or one to enlarge groups
+  - Sigma-m with d lists minterms and don’t-cares
+  - Compare covers side by side to see the shrink
+  notes: Every product term must cover all ON minterms. Cubes must never include an
+    OFF row. Don’t-care rows are optional—you choose zero or one to enlarge groups.
+    Sigma-m with d lists minterms and don’t-cares. Compare covers side by side to
+    see the shrink.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Don’t-care lab starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the F column
+    with blue X cells, and Minimize or Compare controls. Load the starter—ON at zero,
+    two, five, and seven, X at one and three. Minimize with X and check you get A-prime
+    plus C. Compare with and without X to see A-prime C-prime plus AC shrink to two
+    terms. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, take the starter pattern by hand
+  - Write the ignore-X SOP, then regroup using X at one and three
+  - Confirm the with-X form has fewer terms
+  - Try a two-variable preset with one ON and one X
+  - 'Name one pitfall: treating X as OFF by default and missing a smaller cover'
+  notes: 'In the workbook track, take the starter pattern by hand. Write the ignore-X
+    SOP, then regroup using X at one and three. Confirm the with-X form has fewer
+    terms. Try a two-variable preset with one ON and one X. Name one pitfall: treating
+    X as OFF by default and missing a smaller cover.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not let a group cover an OFF row
+  - X is not “don’t optimize”, it is “pick whichever helps.” And remember
+  - Real designs still need a spec for what is truly unreachable versus merely unused
+  notes: 'Do not let a group cover an OFF row. X is not “don’t optimize”—it is “pick
+    whichever helps.” And remember: the browser lab is literacy. Real designs still
+    need a spec for what is truly unreachable versus merely unused.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, minimize one small table with at least one X
+  - When you are ready, take the short quiz, then continue to logic hazards
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, minimize one small table
+    with at least one X. When you are ready, take the short quiz, then continue to
+    logic hazards.

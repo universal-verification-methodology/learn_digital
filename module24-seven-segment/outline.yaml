@@ -1,12 +1,68 @@
-# Module 24 outline
-title: "Seven-segment"
-kind: lab
-lab: seven-segment
+title: Seven-segment
+footer: learn_digital — seven segment
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Seven-segment
+  subtitle: A seven-segment display turns a four-bit nibble into a glyph, zero through
+    nine and A through F
+  notes: A seven-segment display turns a four-bit nibble into a glyph—zero through
+    nine and A through F. Seven lines labeled a through g form the digit; a decoder
+    maps the nibble to which segments light. Common-cathode parts treat one as segment
+    on; common-anode parts invert the whole bus. This module makes nibble decode and
+    polarity concrete.
+- type: bullets
+  title: Segments, patterns, polarity
+  bullets:
+  - Starter nibble A in common cathode drives one-one-one-zero-one-one-one
+  - Digit eight lights all seven; digit one lights only b and c on the right
+  - Digit zero turns g off in the middle
+  - Flip to common anode and the same glyph needs the bitwise complement on the drive
+    bus
+  - The decoder is a lookup table, ROM or case statement in RTL, not seven unrelated
+    wires
+  notes: Starter nibble A in common cathode drives one-one-one-zero-one-one-one—every
+    segment on except d. Digit eight lights all seven; digit one lights only b and
+    c on the right. Digit zero turns g off in the middle. Flip to common anode and
+    the same glyph needs the bitwise complement on the drive bus. The decoder is a
+    lookup table—ROM or case statement in RTL—not seven unrelated wires.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Seven segment starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the segment
+    display and nibble picker, and the abcdefg drive readout. Load the starter—nibble
+    A, common cathode, pattern one-one-one-zero-one-one-one. Try digits zero, one,
+    and eight, then flip to common anode. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track
+  - Write the common-cathode pattern for F
+  - For nibble A on common anode, give the inverted drive string
+  - Name one pitfall
+  notes: 'In the workbook track, sketch segment layout a through g and label which
+    segments form digit two. Write the common-cathode pattern for F. For nibble A
+    on common anode, give the inverted drive string. Name one pitfall: wiring common
+    cathode patterns into a common-anode board without inversion.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not scramble segment order, this lab uses abcdefg as the bit string
+  - Mixed-case hex letters are for readability, not arbitrary encoding
+  - 'And remember: the browser lab is literacy'
+  - Real displays still need current limiting, multiplexing
+  notes: 'Do not scramble segment order—this lab uses abcdefg as the bit string. Mixed-case
+    hex letters are for readability, not arbitrary encoding. And remember: the browser
+    lab is literacy. Real displays still need current limiting, multiplexing, and
+    scan timing beyond a single static digit.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, draw one digit and write its abcdefg pattern
+  - When you are ready, take the short quiz, then continue to clock edge stepper
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, draw one digit and write
+    its abcdefg pattern. When you are ready, take the short quiz, then continue to
+    clock edge stepper.

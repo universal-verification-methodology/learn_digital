@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-1.png'
+duration 30.0
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-2.png'
+duration 32.28
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-3.png'
+duration 23.712
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-4.png'
+duration 23.592
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-5.png'
+duration 22.008
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-6.png'
+duration 19.68
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module42-mem-map/frames/slide-6.png'

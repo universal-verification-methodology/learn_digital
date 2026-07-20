@@ -1,0 +1,53 @@
+{
+  "module": "module31-state-encoding",
+  "title": "State encoding check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Binary encoding of N states needs how many FFs?",
+      "choices": [
+        "⌈log₂ N⌉",
+        "N",
+        "N−1",
+        "2N"
+      ],
+      "answer": 0,
+      "explain": "Compact minimum-width code."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "One-hot encoding of N states uses…",
+      "choices": [
+        "N flip-flops (one bit high)",
+        "⌈log₂ N⌉ flip-flops",
+        "1 flip-flop total",
+        "No flip-flops"
+      ],
+      "answer": 0,
+      "explain": "One FF per state."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Gray codes for consecutive indices differ in…",
+      "choices": [
+        "Exactly one bit",
+        "All bits",
+        "No bits",
+        "Two N flip-flops"
+      ],
+      "answer": 0,
+      "explain": "Single-bit steps on rings/counters."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Multi-bit flips on a transition can glitch combinational decode briefly.",
+      "answer": true,
+      "explain": "Illegal intermediate codes hazard decode."
+    }
+  ]
+}

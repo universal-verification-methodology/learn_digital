@@ -1,12 +1,69 @@
-# Module 37 outline
-title: "Array multiplier"
-kind: lab
-lab: array-mult
+title: Array multiplier
+footer: learn_digital — array mult
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Array multiplier
+  subtitle: Unsigned multiply builds partial products from every bit pair
+  notes: Unsigned multiply builds partial products from every bit pair. Cell A-i dot
+    B-j is an AND—one if both bits are one. Row for B-j sits shifted left by j bit
+    positions, matching pencil-and-paper multiply. Sum the shifted rows with adders
+    and carries to get the product. An N-bit by N-bit result needs up to two-N bits.
+    The array layout is regular but grows as N squared in AND area. This module shows
+    the grid for four-bit five times three.
+- type: bullets
+  title: Five times three starter
+  bullets:
+  - 'Starter: four-bit unsigned A equals five, B equals three'
+  - Five is zero-one-zero-one, three is zero-zero-one-one
+  - Partial row for B-zero is five; row for B-one shifted left is ten
+  - Four AND cells are one in the grid
+  - Add the partials and the product is fifteen, binary zero-zero-one-one-one-one
+  - Product bit zero is A-zero AND B-zero only
+  notes: 'Starter: four-bit unsigned A equals five, B equals three. Five is zero-one-zero-one,
+    three is zero-zero-one-one. Partial row for B-zero is five; row for B-one shifted
+    left is ten. Four AND cells are one in the grid. Add the partials and the product
+    is fifteen—binary zero-zero-one-one-one-one. Product bit zero is A-zero AND B-zero
+    only. If B-j is zero, that entire row is zeros.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Array multiplier starter
+  notes: 'In the browser lab, look at three pieces: the A and B bit rows, the partial-product
+    grid, and the decimal product strip. Load the starter—four-bit five times three.
+    Toggle bits, change width, read partial integers PP0 plus PP1. Use Check when
+    a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, draw the AND grid for three-bit two times three
+  - Write partial row zero and row one with shifts
+  - Compute product bit zero by hand
+  - Explain why N-bit times N-bit needs two-N bits
+  - 'Name one pitfall: forgetting the left shift on each B-j row'
+  notes: 'In the workbook track, draw the AND grid for three-bit two times three.
+    Write partial row zero and row one with shifts. Compute product bit zero by hand.
+    Explain why N-bit times N-bit needs two-N bits. Name one pitfall: forgetting the
+    left shift on each B-j row.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse the AND grid with the final sum, adders still reduce the rows
+  - Signed multiply needs Booth or similar, not this unsigned array alone
+  - Area and delay scale with width; real chips use Wallace trees or Booth
+  - 'And remember: the browser lab is literacy'
+  - Real RTL still needs pipelining and signed/unsigned rules
+  notes: 'Do not confuse the AND grid with the final sum—adders still reduce the rows.
+    Signed multiply needs Booth or similar, not this unsigned array alone. Area and
+    delay scale with width; real chips use Wallace trees or Booth. And remember: the
+    browser lab is literacy. Real RTL still needs pipelining and signed/unsigned rules.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, sketch one partial row and one shifted row
+  - When you are ready, take the short quiz, then continue to the ALU explorer
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, sketch one partial row and
+    one shifted row. When you are ready, take the short quiz, then continue to the
+    ALU explorer.

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-1.png'
+duration 27.072
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-2.png'
+duration 33.72
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-3.png'
+duration 23.784
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-4.png'
+duration 27.552
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-5.png'
+duration 20.328
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-6.png'
+duration 18.912
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module20-half-full-adder/frames/slide-6.png'
