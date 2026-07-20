@@ -1,23 +1,31 @@
-# Module 48 transcript — Handshake (valid/ready)
+# Module 48 — Handshake (valid/ready)
 
-> Stub for voiceover / clip. Expand when recording (module-slides).
+**Module id:** module48-handshake  
+**Lab:** handshake  
+**Tracks:** A (workbook) · B (browser lab)
 
-## Hook
+## Slide 1 — Valid/ready handshake
 
-In digital design you will live in bits, gates, and timing. This module: **Handshake (valid/ready)**.
+A streaming beat moves when source and sink agree in the same cycle. Valid means the source offers data—the payload is meaningful this cycle. Ready means the sink can accept a beat. Fire equals valid and ready both high; only then is data accepted. If ready is one but valid is zero, nothing transfers—the source is not offering. If valid is one but ready is zero, the sink backpressures; a well-behaved source holds valid and data stable until the handshake completes.
 
-## Teach
+## Slide 2 — Starter beat
 
-(3–5 sentences on the concept.)
+Starter preset: both assert on cycle zero. Valid and ready are one, data is hex A5, and fire is one—one beat transfers immediately. The wave table shows eight cycles; click valid or ready cells to toggle. Step through cycles to see when fire lights up. Try source-stall preset—valid rises late while ready waits. Try sink-stall—valid held high until ready finally rises. Back-to-back preset fires three transfers in a row when both sides stay ready.
 
-## Show Track B
+## Slide 3 — Browser lab
 
-Open the browser lab, `handshake`. Load the starter. Point at the UI.
+![Handshake starter](assets/lab-starter.png)
 
-## Show Track A
+In the browser lab, load the starter example and watch the verdict panel. Green means transfer at the current cycle; gray means no transfer. The fire row marks every cycle where valid and ready overlap. Presets load stall and burst patterns. Edit data on a transfer cycle, or toggle cells to build your own pattern. Challenges ask how many beats transfer and when the first handshake fires.
 
-On paper or a whiteboard, demonstrate one sketch from EXAMPLES.md.
+## Slide 4 — Workbook practice
 
-## Your turn
+On paper, draw valid and ready waveforms for one successful beat and one sink stall. Write the fire equation in words. Tabulate four cycles showing valid, ready, and whether a transfer happens. Explain what the source should do while valid is high and ready is still low. Name one place you might see this handshake style on chip—streaming buses like AXI-Stream are the usual answer.
 
-Complete the checklist for at least one track. Then take the short quiz.
+## Slide 5 — Pitfalls to watch
+
+Do not assume valid alone moves data—both sides must agree. Do not toggle data while waiting for ready; stability matters for real RTL. Avoid combinational loops where ready depends on valid in a way that creates a cycle. This lab is conceptual timing literacy, not a full protocol checker or VIP. And remember: misaligned valid and ready means zero transfers even if both signals pulse somewhere in the window.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track—preferably both. In the browser, run together, source-stall, and sink-stall presets and count transfers. On paper, sketch a two-beat back-to-back burst. When you are ready, take the short quiz, then continue to the block-diagram integrator.

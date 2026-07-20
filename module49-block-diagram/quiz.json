@@ -1,0 +1,53 @@
+{
+  "module": "module49-block-diagram",
+  "title": "Block-diagram integrator check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A legal wire in this lab goes…",
+      "choices": [
+        "from an output to an input of the same type",
+        "from any input to any input",
+        "only between identical block titles",
+        "without types ever"
+      ],
+      "answer": 0,
+      "explain": "out → in, matching addr/data/ctrl/instr."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter preset already wires…",
+      "choices": [
+        "ALU + RegFile datapath (CPU control to ALU/RF)",
+        "CPU ↔ Memory completely",
+        "Only the system bus",
+        "Nothing — blank canvas"
+      ],
+      "answer": 0,
+      "explain": "Four CPU↔Memory links still missing."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "To finish the starter you must add CPU↔Memory links for…",
+      "choices": [
+        "addr, wdata, rdata, and instr",
+        "only the clock",
+        "Gray pointers",
+        "valid and ready only"
+      ],
+      "answer": 0,
+      "explain": "Fetch and load/store paths."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Connecting an addr port to a data port is rejected in this teaching model.",
+      "answer": true,
+      "explain": "Types must match."
+    }
+  ]
+}

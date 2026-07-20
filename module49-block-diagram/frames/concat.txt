@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-1.png'
+duration 35.904
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-2.png'
+duration 38.856
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-3.png'
+duration 30.192
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-4.png'
+duration 24.864
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-5.png'
+duration 27.144
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-6.png'
+duration 21.12
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module49-block-diagram/frames/slide-6.png'

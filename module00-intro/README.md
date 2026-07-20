@@ -35,13 +35,16 @@ HDL coding lands in **learn_verilog** / **learn_systemverilog**. Legacy combined
 3. Check off **CHECKLIST.md**.
 4. Optional: skim `outline.yaml` / `transcript.md` for upcoming slides & clips.
 
-## Media (planned)
+## Media
 
 | Artifact | Path |
 |----------|------|
+| Transcript | [transcript.md](transcript.md) |
 | Outline | [outline.yaml](outline.yaml) |
-| Transcript stub | [transcript.md](transcript.md) |
-| Slides / video | generate later with **module-slides** |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
+
 
 ## Next
 

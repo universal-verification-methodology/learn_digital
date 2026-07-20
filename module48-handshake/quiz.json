@@ -1,0 +1,53 @@
+{
+  "module": "module48-handshake",
+  "title": "Handshake (valid/ready) check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "A beat transfers when…",
+      "choices": [
+        "valid and ready are both 1 in the same cycle",
+        "only valid is 1",
+        "only ready is 1",
+        "the clock stops"
+      ],
+      "answer": 0,
+      "explain": "fire = valid && ready."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Starter preset on cycle 0…",
+      "choices": [
+        "valid=ready=1, data 0xA5 — one transfer",
+        "no signals asserted",
+        "ready only, no valid",
+        "three back-to-back beats"
+      ],
+      "answer": 0,
+      "explain": "Both assert preset."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "If valid=1 but ready=0, a well-behaved source usually…",
+      "choices": [
+        "holds valid and data stable until ready rises",
+        "drops valid immediately every cycle",
+        "loses the beat forever",
+        "drives high-Z on the bus"
+      ],
+      "answer": 0,
+      "explain": "Backpressure stability rule."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Transfer fire is written as fire = valid && ready.",
+      "answer": true,
+      "explain": "Boolean AND of handshake signals."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module": "module50-wrap",
+  "title": "Digital complete check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "This wrap module mainly…",
+      "choices": [
+        "Introduces a new browser lab",
+        "Recaps what you can do and points to learn_verilog",
+        "Installs Vivado for you",
+        "Replaces Track A forever"
+      ],
+      "answer": 1,
+      "explain": "Wrap modules recap outcomes and link the next course."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "If you mostly used browser labs, a good next step before Verilog is…",
+      "choices": [
+        "Never sketch on paper",
+        "Redo workbook sketches for clock, reset, and FSM modules",
+        "Skip all number-system modules",
+        "Start with UVM agents"
+      ],
+      "answer": 1,
+      "explain": "Close Track A gaps so timing and encodings feel natural."
+    },
+    {
+      "id": "q3",
+      "type": "true_false",
+      "prompt": "learn_digital teaches concepts; deep HDL syntax comes in learn_verilog.",
+      "answer": true,
+      "explain": "This course builds the mental model RTL will describe."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "The recommended next course after learn_digital is…",
+      "choices": [
+        "learn_verilog",
+        "Skip straight to tape-out",
+        "Only PowerPoint",
+        "Uninstall the browser"
+      ],
+      "answer": 0,
+      "explain": "The syllabus next step is learn_verilog."
+    }
+  ]
+}

@@ -20,6 +20,16 @@ If you mainly used **workbook**, open any skipped browser labs for interactive c
 → **learn_verilog** (syllabus: [../../syllabus.md](../../syllabus.md#4-learn_verilog))  
 Legacy combined path: [`../learn_digital_verilog/`](../learn_digital_verilog/).
 
+## Media
+
+| Artifact | Path |
+|----------|------|
+| Transcript | [transcript.md](transcript.md) |
+| Outline | [outline.yaml](outline.yaml) |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
+
 ## Checklist
 
 - [ ] I completed Track A and/or Track B for the lab modules I care about

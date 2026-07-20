@@ -25,13 +25,16 @@ After this module you can explain and practice the ideas taught by **`parity-che
 
 > Concept labs are literacy tools — they prepare you for RTL courses; they do not replace writing synthesizable HDL.
 
-## Media (planned)
+## Media
 
 | Artifact | Path |
 |----------|------|
+| Transcript | [transcript.md](transcript.md) |
 | Outline | [outline.yaml](outline.yaml) |
-| Transcript stub | [transcript.md](transcript.md) |
-| Slides / video | generate later with **module-slides** |
+| Slides | [slides.pptx](slides.pptx) · [slides.pdf](slides.pdf) |
+| Video | [video.mp4](video.mp4) |
+| Quiz | [quiz.json](quiz.json) |
+
 
 ## Files
 

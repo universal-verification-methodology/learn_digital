@@ -1,12 +1,69 @@
-# Module 50 outline
-title: "Digital complete → Verilog"
-kind: wrap
-lab: null
+title: Digital path complete
+footer: learn_digital — wrap
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Digital path complete
+  subtitle: State machines, then datapath, memory, FIFOs, and handshakes
+  notes: 'You have walked the digital foundations path—from radix and two’s complement,
+    through Boolean logic and gates, into clocks, resets, and state machines, then
+    datapath, memory, FIFOs, and handshakes. This short wrap names what you can do
+    now and points you to the next course: learn Verilog.'
+- type: bullets
+  title: What you can do now
+  bullets:
+  - You can move across number systems and encodings with confidence
+  - You can reason about combinational and sequential logic, FSM encodings
+  - You can explain adders, ALUs, memory maps, Gray FIFO pointers
+  - You are not writing synthesizable HDL yet
+  notes: You can move across number systems and encodings with confidence. You can
+    reason about combinational and sequential logic, FSM encodings, and simple timing
+    sketches. You can explain adders, ALUs, memory maps, Gray FIFO pointers, and valid-ready
+    handshakes at the concept level—and wire blocks in a system diagram. You are not
+    writing synthesizable HDL yet; you are building the mental model Verilog will
+    describe.
+- type: bullets
+  title: Close the track gaps
+  bullets:
+  - If you mainly used browser labs, redo a few workbook sketches for the clock, reset
+  - If you mainly used the workbook, open any skipped browser labs for interactive
+    challenges
+  - Either track works for self-study
+  notes: If you mainly used browser labs, redo a few workbook sketches for the clock,
+    reset, and FSM modules so tables and timing feel natural on paper. If you mainly
+    used the workbook, open any skipped browser labs for interactive challenges. Either
+    track works for self-study; both together stick best before you open a Verilog
+    editor.
+- type: two_column
+  title: The labs you practiced
+  left:
+  - Here is the tools index again, the same shelf of concept labs you opened along
+    the way
+  - You do not need to re-clear every challenge
+  - Use it as a map
+  right: assets/tools-index.png
+  notes: 'Here is the tools index again—the same shelf of concept labs you opened
+    along the way. You do not need to re-clear every challenge. Use it as a map: if
+    a skill still feels shaky, jump back to that lab, then return here when you are
+    ready for RTL.'
+- type: bullets
+  title: 'Next: learn Verilog'
+  bullets:
+  - Verilog is where these concepts become modules, ports, and always blocks
+  - Start learn Verilog from the syllabus when your wrap checklist feels honest
+  - Keep a small practice folder for exercises
+  - The older combined digital-and-Verilog path is optional stretch reading, not required
+  notes: Verilog is where these concepts become modules, ports, and always blocks.
+    Start learn Verilog from the syllabus when your wrap checklist feels honest. Keep
+    a small practice folder for exercises—you will reuse it when simulating and debugging.
+    The older combined digital-and-Verilog path is optional stretch reading, not required.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Review the wrap checklist
+  - Confirm you can explain radix, two’s complement
+  - Name one module you would revisit if a topic still feels thin
+  - When you are ready, take the short quiz, then continue to learn Verilog
+  notes: Review the wrap checklist. Confirm you can explain radix, two’s complement,
+    and a simple FSM encoding without looking it up. Name one module you would revisit
+    if a topic still feels thin. When you are ready, take the short quiz, then continue
+    to learn Verilog.

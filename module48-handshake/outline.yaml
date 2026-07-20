@@ -1,12 +1,76 @@
-# Module 48 outline
-title: "Handshake (valid/ready)"
-kind: lab
-lab: handshake
+title: Valid/ready handshake
+footer: learn_digital — handshake
 slides:
-  - Course context / why this matters for digital design
-  - Core idea (1 concept)
-  - Track B: show lab starter (if lab module)
-  - Track A: one paper / sketch demo
-  - Common pitfalls
-  - Your turn + quiz prompt
-duration_minutes: 8
+- type: title
+  title: Valid/ready handshake
+  subtitle: A streaming beat moves when source and sink agree in the same cycle
+  notes: A streaming beat moves when source and sink agree in the same cycle. Valid
+    means the source offers data—the payload is meaningful this cycle. Ready means
+    the sink can accept a beat. Fire equals valid and ready both high; only then is
+    data accepted. If ready is one but valid is zero, nothing transfers—the source
+    is not offering. If valid is one but ready is zero, the sink backpressures; a
+    well-behaved source holds valid and data stable until the handshake completes.
+- type: bullets
+  title: Starter beat
+  bullets:
+  - 'Starter preset: both assert on cycle zero'
+  - Valid and ready are one, data is hex A5, and fire is one, one beat transfers immediately
+  - The wave table shows eight cycles; click valid or ready cells to toggle
+  - Step through cycles to see when fire lights up
+  - Try source-stall preset, valid rises late while ready waits
+  - Try sink-stall, valid held high until ready finally rises
+  notes: 'Starter preset: both assert on cycle zero. Valid and ready are one, data
+    is hex A5, and fire is one—one beat transfers immediately. The wave table shows
+    eight cycles; click valid or ready cells to toggle. Step through cycles to see
+    when fire lights up. Try source-stall preset—valid rises late while ready waits.
+    Try sink-stall—valid held high until ready finally rises. Back-to-back preset
+    fires three transfers in a row when both sides stay ready.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Handshake starter
+  notes: In the browser lab, load the starter example and watch the verdict panel.
+    Green means transfer at the current cycle; gray means no transfer. The fire row
+    marks every cycle where valid and ready overlap. Presets load stall and burst
+    patterns. Edit data on a transfer cycle, or toggle cells to build your own pattern.
+    Challenges ask how many beats transfer and when the first handshake fires.
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - On paper, draw valid and ready waveforms for one successful beat and one sink
+    stall
+  - Write the fire equation in words
+  - Tabulate four cycles showing valid, ready, and whether a transfer happens
+  - Explain what the source should do while valid is high and ready is still low
+  - Name one place you might see this handshake style on chip
+  notes: On paper, draw valid and ready waveforms for one successful beat and one
+    sink stall. Write the fire equation in words. Tabulate four cycles showing valid,
+    ready, and whether a transfer happens. Explain what the source should do while
+    valid is high and ready is still low. Name one place you might see this handshake
+    style on chip—streaming buses like AXI-Stream are the usual answer.
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not assume valid alone moves data, both sides must agree
+  - Do not toggle data while waiting for ready; stability matters for real RTL
+  - Avoid combinational loops where ready depends on valid in a way that creates a
+    cycle
+  - This lab is conceptual timing literacy, not a full protocol checker or VIP
+  - And remember
+  notes: 'Do not assume valid alone moves data—both sides must agree. Do not toggle
+    data while waiting for ready; stability matters for real RTL. Avoid combinational
+    loops where ready depends on valid in a way that creates a cycle. This lab is
+    conceptual timing literacy, not a full protocol checker or VIP. And remember:
+    misaligned valid and ready means zero transfers even if both signals pulse somewhere
+    in the window.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, run together, source-stall, and sink-stall presets and count transfers
+  - On paper, sketch a two-beat back-to-back burst
+  - When you are ready, take the short quiz, then continue to the block-diagram integrator
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    run together, source-stall, and sink-stall presets and count transfers. On paper,
+    sketch a two-beat back-to-back burst. When you are ready, take the short quiz,
+    then continue to the block-diagram integrator.
