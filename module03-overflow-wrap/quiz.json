@@ -1,0 +1,53 @@
+{
+  "module": "module03-overflow-wrap",
+  "title": "Overflow / wrap check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "At width 4, unsigned 14+3 stores which wrapped result?",
+      "choices": [
+        "17",
+        "1",
+        "15",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "17 mod 16 = 1 in 4-bit unsigned."
+    },
+    {
+      "id": "q2",
+      "type": "true_false",
+      "prompt": "Carry flag is always the same as signed overflow.",
+      "answer": false,
+      "explain": "Carry and signed overflow answer different questions."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Saturation versus wrap means…",
+      "choices": [
+        "They are identical behaviors",
+        "Saturation clamps to min/max; wrap uses modular bits",
+        "Wrap only happens in floating point",
+        "Saturation ignores width"
+      ],
+      "answer": 1,
+      "explain": "Saturation clamps; ordinary fixed-width add usually wraps."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "Free-running counters often rely on…",
+      "choices": [
+        "Never wrapping",
+        "Intentional wrap at the width",
+        "Floating-point add",
+        "Removing the MSB"
+      ],
+      "answer": 1,
+      "explain": "Counters commonly count modulo 2^w on purpose."
+    }
+  ]
+}

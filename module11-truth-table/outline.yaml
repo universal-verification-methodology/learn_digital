@@ -1,0 +1,66 @@
+title: Truth tables
+footer: learn_digital — truth table
+slides:
+- type: title
+  title: Truth tables
+  subtitle: A truth table lists every input combination and the output F
+  notes: A truth table lists every input combination and the output F. Two inputs
+    give four rows; three inputs give eight. It is the ground truth for gates, muxes,
+    and adder bits before you write HDL. This module makes fill, check, and read a
+    table concrete.
+- type: bullets
+  title: Every row, one function
+  bullets:
+  - Each row is one minterm index from all zeros through all ones
+  - AND is one only when every input is one
+  - OR is one when any input is one
+  - XOR is one when inputs differ
+  - Challenges in the lab ask you to match a described function
+  - Edit F in the table or the expression; both can stay in sync
+  notes: Each row is one minterm index from all zeros through all ones. AND is one
+    only when every input is one. OR is one when any input is one. XOR is one when
+    inputs differ. Challenges in the lab ask you to match a described function—majority,
+    parity, mux select, full-adder sum. Edit F in the table or the expression; both
+    can stay in sync.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Truth table starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the input
+    and F columns, and expression or fill controls. Load the starter for F equals
+    A and B on two variables. Step through the four rows and confirm F is one only
+    on the one-one row. Pick a challenge, fill the table or edit the expression, then
+    Check. Export SOP or POS when you want the sum-of-products picture. Explore a
+    few; no full tour needed.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, build a two-input AND and XOR table by hand
+  - Add a three-input majority row set
+  - Say how many rows you need for four variables
+  - Name one pitfall
+  notes: 'In the workbook track, build a two-input AND and XOR table by hand. Add
+    a three-input majority row set. Say how many rows you need for four variables.
+    Name one pitfall: stopping at three rows when you have three inputs—that misses
+    half the table.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not skip rows or duplicate an index
+  - X in a cell means don’t-care, not “pick any answer.” And remember
+  - Real verification still needs exhaustive or constrained cases beyond one hand
+    table
+  notes: 'Do not skip rows or duplicate an index. X in a cell means don’t-care, not
+    “pick any answer.” And remember: the browser lab is literacy. Real verification
+    still needs exhaustive or constrained cases beyond one hand table.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, write one full table and circle the minterms where F is one
+  - When you are ready, take the short quiz, then continue to Boolean laws
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, write one full table and
+    circle the minterms where F is one. When you are ready, take the short quiz, then
+    continue to Boolean laws.

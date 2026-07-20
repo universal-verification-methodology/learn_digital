@@ -1,0 +1,53 @@
+{
+  "module": "module08-fixed-point",
+  "title": "Fixed-point Qm.n check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Decoding a signed Qm.n raw value divides by…",
+      "choices": [
+        "2^m",
+        "2^n",
+        "m+n",
+        "10^n"
+      ],
+      "answer": 1,
+      "explain": "Real ≈ signed_raw / 2^n."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Smallest positive step in Qm.n is…",
+      "choices": [
+        "2^m",
+        "2^-n",
+        "1",
+        "0.1"
+      ],
+      "answer": 1,
+      "explain": "One LSB in the fraction field is 2^-n."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "In this lab, total bit width W equals…",
+      "choices": [
+        "m only",
+        "n only",
+        "m+n",
+        "2^(m+n)"
+      ],
+      "answer": 2,
+      "explain": "W = m + n (m includes sign in this lab)."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Q4.4 raw 0x18 (decimal 24) decodes to 1.5.",
+      "answer": true,
+      "explain": "24 / 2^4 = 24/16 = 1.5."
+    }
+  ]
+}

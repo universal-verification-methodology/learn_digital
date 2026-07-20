@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-1.png'
+duration 19.824
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-2.png'
+duration 22.296
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-3.png'
+duration 27.984
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-4.png'
+duration 19.656
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-5.png'
+duration 17.784
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-6.png'
+duration 18.168
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module07-parity-checksum/frames/slide-6.png'

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-1.png'
+duration 18.48
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-2.png'
+duration 24.696
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-3.png'
+duration 29.424
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-4.png'
+duration 17.184
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-5.png'
+duration 16.032
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-6.png'
+duration 18.432
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module11-truth-table/frames/slide-6.png'

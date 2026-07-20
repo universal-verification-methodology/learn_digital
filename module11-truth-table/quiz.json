@@ -1,0 +1,53 @@
+{
+  "module": "module11-truth-table",
+  "title": "Truth tables check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "How many rows does a truth table with 3 inputs have?",
+      "choices": [
+        "3",
+        "6",
+        "8",
+        "16"
+      ],
+      "answer": 2,
+      "explain": "2^n rows: 2^3 = 8."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Two-input AND: F = 1 only when…",
+      "choices": [
+        "A or B is 1",
+        "A and B are both 1",
+        "A and B differ",
+        "both are 0"
+      ],
+      "answer": 1,
+      "explain": "AND is 1 only on the 11 row."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Two-input XOR: F = 1 when…",
+      "choices": [
+        "A and B are equal",
+        "A and B differ",
+        "both are 1",
+        "both are 0"
+      ],
+      "answer": 1,
+      "explain": "XOR is 1 on 01 and 10 rows."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "A truth table must list every input combination exactly once.",
+      "answer": true,
+      "explain": "Each minterm index appears once; missing rows hide bugs."
+    }
+  ]
+}

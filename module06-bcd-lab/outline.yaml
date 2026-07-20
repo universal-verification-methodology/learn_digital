@@ -1,0 +1,64 @@
+title: BCD
+footer: learn_digital — bcd lab
+slides:
+- type: title
+  title: BCD
+  subtitle: Binary-coded decimal stores each decimal digit in its own four-bit nibble
+  notes: Binary-coded decimal stores each decimal digit in its own four-bit nibble.
+    Displays, money, and some bus formats still speak BCD. Decimal forty-two packs
+    as hex forty-two, not as binary two-A. This module makes that packing—and invalid
+    nibbles—easy to see.
+- type: bullets
+  title: Four bits per digit
+  bullets:
+  - Each BCD digit uses four bits and runs from zero through nine
+  - Nibbles A through F are invalid
+  - Packed BCD lays digits side by side in one word
+  - Do not confuse BCD with ordinary binary of the same decimal value
+  notes: Each BCD digit uses four bits and runs from zero through nine. Nibbles A
+    through F are invalid. Packed BCD lays digits side by side in one word—two digits
+    need eight bits, four digits need sixteen. Do not confuse BCD with ordinary binary
+    of the same decimal value; encode and decode on purpose.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: BCD lab starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the digit
+    and packed-hex views, and Encode or Decode controls. Load the starter for decimal
+    forty-two as packed zero-x-forty-two. Try encoding ninety-nine, then load an invalid
+    nibble like four-A and watch valid go false. Show an encode trace when you want
+    the digit-by-digit picture. Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, write packed BCD for forty-two, ninety-nine
+  - Mark why nibble A is illegal
+  - Encode two thousand twenty-six as four digits and check you get hex two-zero-two-six
+  - 'Note one pitfall: treating binary zero-x-two-A as if it were BCD for forty-two'
+  notes: 'In the workbook track, write packed BCD for forty-two, ninety-nine, and
+    zero with two digits. Mark why nibble A is illegal. Encode two thousand twenty-six
+    as four digits and check you get hex two-zero-two-six. Note one pitfall: treating
+    binary zero-x-two-A as if it were BCD for forty-two.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not mix binary and BCD encodings of the same number
+  - Invalid nibbles must be rejected, not silently accepted
+  - 'And remember: the browser lab is literacy'
+  - Real displays and decimal datapaths still need correct packing width and digit
+    checks
+  notes: 'Do not mix binary and BCD encodings of the same number. Invalid nibbles
+    must be rejected, not silently accepted. And remember: the browser lab is literacy.
+    Real displays and decimal datapaths still need correct packing width and digit
+    checks.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, pack a few decimals and one invalid case by hand
+  - When you are ready, take the short quiz, then continue to parity and checksum
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, pack a few decimals and one
+    invalid case by hand. When you are ready, take the short quiz, then continue to
+    parity and checksum.

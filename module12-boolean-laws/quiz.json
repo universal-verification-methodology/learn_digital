@@ -1,0 +1,53 @@
+{
+  "module": "module12-boolean-laws",
+  "title": "Boolean laws check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "De Morgan: ~(A·B) equals…",
+      "choices": [
+        "A'·B'",
+        "A'+B'",
+        "A+B",
+        "A·B"
+      ],
+      "answer": 1,
+      "explain": "NOT over AND becomes OR of the complements."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Absorption: A + A·B simplifies to…",
+      "choices": [
+        "B",
+        "A·B",
+        "A",
+        "1"
+      ],
+      "answer": 2,
+      "explain": "A absorbs the redundant A·B term."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Complement: A·A' equals…",
+      "choices": [
+        "0",
+        "1",
+        "A",
+        "A'"
+      ],
+      "answer": 0,
+      "explain": "A and its complement cannot both be true."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Double negation: ~~A simplifies to A.",
+      "answer": true,
+      "explain": "Two NOTs cancel."
+    }
+  ]
+}

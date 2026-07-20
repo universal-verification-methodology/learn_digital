@@ -1,0 +1,53 @@
+{
+  "module": "module07-parity-checksum",
+  "title": "Parity / checksum check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Even parity bit is commonly equal to…",
+      "choices": [
+        "OR of all bits",
+        "Reduction XOR of data bits",
+        "AND of all bits",
+        "Bit count divided by 8"
+      ],
+      "answer": 1,
+      "explain": "Even P is the XOR (parity) of the data bits."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Does a single parity bit correct bit errors?",
+      "choices": [
+        "Yes, always",
+        "Yes, for two-bit errors",
+        "No — it detects (many) flips",
+        "Only in odd mode"
+      ],
+      "answer": 2,
+      "explain": "Parity detects many single-bit errors; it does not correct them."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A simple multi-byte XOR checksum verifies when the fold is…",
+      "choices": [
+        "0xFF",
+        "0",
+        "Equal to the last byte",
+        "Odd"
+      ],
+      "answer": 1,
+      "explain": "XOR fold to zero means the check matched."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "After a good even-parity verify, flipping one data bit should make verify FAIL.",
+      "answer": true,
+      "explain": "A single data flip changes the ones parity; check fails."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+title: Two’s complement
+footer: learn_digital — twos complement
+slides:
+- type: title
+  title: Two’s complement
+  subtitle: Unsigned numbers only go one way
+  notes: 'Unsigned numbers only go one way. Hardware also needs negative values in
+    the same bit box. Two’s complement is the usual signed encoding: the most significant
+    bit is the sign, and addition still works with ordinary binary adders. This module
+    makes that encoding tangible—in the browser, then on paper.'
+- type: bullets
+  title: Sign bit, negate, range
+  bullets:
+  - At a fixed width, the top bit is the sign
+  - All ones is minus one
+  - To negate, invert every bit and add one
+  - The range is not symmetric
+  - That asymmetric floor is easy to forget when you “just add one more.”
+  notes: 'At a fixed width, the top bit is the sign. All ones is minus one. To negate,
+    invert every bit and add one. The range is not symmetric: at width eight you get
+    minus one hundred twenty-eight through plus one hundred twenty-seven. That asymmetric
+    floor is easy to forget when you “just add one more.”'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Two’s complement starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the bit pattern,
+    and the signed value controls. Load the starter—you should see plus five—then
+    try Negate and watch the bits become minus five. Use Check when a challenge looks
+    done. Explore a few challenges; you do not need a full UI tour here.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, write width eight on paper
+  - 'Start from plus five: bits ending in zero one zero one'
+  - Negate by hand, invert, then add one, and confirm you land on minus five
+  - Then write the signed meanings of all ones, the minimum pattern with only the
+    sign bit set
+  - 'Name one RTL pitfall: treating a signed wire as unsigned, or forgetting the asymmetric
+    min'
+  notes: 'In the workbook track, write width eight on paper. Start from plus five:
+    bits ending in zero one zero one. Negate by hand—invert, then add one—and confirm
+    you land on minus five. Then write the signed meanings of all ones, the minimum
+    pattern with only the sign bit set, and the maximum with the sign clear and the
+    rest ones. Name one RTL pitfall: treating a signed wire as unsigned, or forgetting
+    the asymmetric min.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not read the most significant bit as “just another magnitude bit” when the
+    type is
+  - Do not expect plus one hundred twenty-eight to fit in eight-bit two’s complement,
+    it wraps
+  - 'And remember: the browser lab is literacy'
+  - Waveforms and RTL still demand the same signed-versus-unsigned discipline
+  notes: 'Do not read the most significant bit as “just another magnitude bit” when
+    the type is signed. Do not expect plus one hundred twenty-eight to fit in eight-bit
+    two’s complement—it wraps. And remember: the browser lab is literacy. Waveforms
+    and RTL still demand the same signed-versus-unsigned discipline.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, negate one value by hand and list min, max, and minus one for one width
+  - When you are ready, take the short quiz, then continue to overflow and wrap
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, negate one value by hand
+    and list min, max, and minus one for one width. When you are ready, take the short
+    quiz, then continue to overflow and wrap.

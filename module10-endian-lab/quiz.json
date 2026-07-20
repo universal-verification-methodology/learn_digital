@@ -1,0 +1,53 @@
+{
+  "module": "module10-endian-lab",
+  "title": "Endian packing check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Little-endian stores at the lowest address the…",
+      "choices": [
+        "MSB",
+        "LSB",
+        "sign bit only",
+        "middle byte"
+      ],
+      "answer": 1,
+      "explain": "LE puts the least significant byte at address +0."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "For 0x12345678 in little-endian, byte at +0 is…",
+      "choices": [
+        "0x12",
+        "0x34",
+        "0x56",
+        "0x78"
+      ],
+      "answer": 3,
+      "explain": "LE order: 78 56 34 12 from low to high address."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Network byte order is usually…",
+      "choices": [
+        "little-endian",
+        "big-endian",
+        "host-dependent only",
+        "random"
+      ],
+      "answer": 1,
+      "explain": "Wire/network order is conventionally big-endian."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Changing endian layout changes the integer value of 0x12345678.",
+      "answer": false,
+      "explain": "Same value; only memory byte order differs."
+    }
+  ]
+}

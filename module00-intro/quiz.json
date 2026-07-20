@@ -1,0 +1,53 @@
+{
+  "module": "module00-intro",
+  "title": "Welcome check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Track A in learn_digital means practice on…",
+      "choices": [
+        "Only the browser tools page",
+        "Paper / notes / workbook sketches",
+        "Writing full Verilog modules",
+        "PowerPoint slides only"
+      ],
+      "answer": 1,
+      "explain": "Track A is the workbook track: tables, encodings, and timing sketches by hand."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Track B is mainly for…",
+      "choices": [
+        "Installing a synthesis tool",
+        "Browser concept labs and quick feedback",
+        "Replacing paper practice forever",
+        "Editing the syllabus"
+      ],
+      "answer": 1,
+      "explain": "Track B builds intuition in the browser; the workbook track still hardens the idea."
+    },
+    {
+      "id": "q3",
+      "type": "true_false",
+      "prompt": "This course teaches deep HDL syntax (Verilog always blocks and ports).",
+      "answer": false,
+      "explain": "learn_digital is concepts without deep HDL; Verilog and SystemVerilog come in later courses."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "A good first rhythm for a lab module is…",
+      "choices": [
+        "Skip the README and only watch video",
+        "Browser lab for the idea, then a workbook sketch",
+        "Only copy answers without a checklist",
+        "Start with UVM agents"
+      ],
+      "answer": 1,
+      "explain": "Browser first for intuition, then paper for fidelity, is the recommended path."
+    }
+  ]
+}

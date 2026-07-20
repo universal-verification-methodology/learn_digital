@@ -1,0 +1,53 @@
+{
+  "module": "module06-bcd-lab",
+  "title": "BCD check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "How many bits does one BCD digit use?",
+      "choices": [
+        "2",
+        "4",
+        "8",
+        "10"
+      ],
+      "answer": 1,
+      "explain": "Each decimal digit is a 4-bit nibble."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Largest valid BCD digit value?",
+      "choices": [
+        "7",
+        "9",
+        "15",
+        "F"
+      ],
+      "answer": 1,
+      "explain": "Valid digits are 0–9; A–F are invalid."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Decimal 42 as packed BCD (2 digits) is…",
+      "choices": [
+        "0x2A",
+        "0x42",
+        "0x24",
+        "42 binary bits"
+      ],
+      "answer": 1,
+      "explain": "Nibbles 4 and 2 pack as 0x42; binary 42 is 0x2A."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Nibble 0xA is a valid BCD digit.",
+      "answer": false,
+      "explain": "0xA–0xF are not decimal digits in BCD."
+    }
+  ]
+}

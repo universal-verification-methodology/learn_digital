@@ -1,0 +1,53 @@
+{
+  "module": "module02-twos-complement",
+  "title": "Two’s complement check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "In two’s complement, the MSB is best described as the…",
+      "choices": [
+        "Carry bit only",
+        "Sign bit",
+        "Always zero",
+        "Clock enable"
+      ],
+      "answer": 1,
+      "explain": "The most significant bit is the sign in two’s complement."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "The usual way to negate a two’s-complement value is…",
+      "choices": [
+        "Shift left once",
+        "Invert all bits, then add one",
+        "Clear the MSB only",
+        "XOR with zero"
+      ],
+      "answer": 1,
+      "explain": "Invert + 1 is the standard negate."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "At width 8, the two’s-complement minimum is…",
+      "choices": [
+        "−255",
+        "−128",
+        "−127",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "8-bit two’s complement ranges from −128 to +127."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "All-ones at a fixed width is −1 in two’s complement.",
+      "answer": true,
+      "explain": "All ones is the canonical −1 pattern."
+    }
+  ]
+}

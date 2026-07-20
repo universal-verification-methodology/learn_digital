@@ -1,0 +1,53 @@
+{
+  "module": "module01-radix-converter",
+  "title": "Radix & bit width check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "At a fixed width, binary, hex, and unsigned decimal are best thought of as…",
+      "choices": [
+        "Unrelated numbers that never match",
+        "Different spellings of the same bit pattern",
+        "Only useful in floating-point math",
+        "Replacements for a clock"
+      ],
+      "answer": 1,
+      "explain": "They are views of one fixed-width bit pattern."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "At width 8, the all-ones pattern (0xFF) as two’s-complement signed is…",
+      "choices": [
+        "255",
+        "−1",
+        "128",
+        "0"
+      ],
+      "answer": 1,
+      "explain": "All ones in two’s complement is −1; unsigned reading is 255."
+    },
+    {
+      "id": "q3",
+      "type": "true_false",
+      "prompt": "Changing bit width can change the meaning of a pattern even if the digits you typed look the same.",
+      "answer": true,
+      "explain": "Width is a hard budget; the same hex text may not mean the same bits after a width change."
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "A good workbook check after the browser lab is…",
+      "choices": [
+        "Only memorize button labels",
+        "Convert one value by hand (binary / hex / decimal) and name a pitfall",
+        "Skip paper because the UI always ships with chips",
+        "Write a full UVM agent"
+      ],
+      "answer": 1,
+      "explain": "Track A hardens the idea without UI crutches."
+    }
+  ]
+}

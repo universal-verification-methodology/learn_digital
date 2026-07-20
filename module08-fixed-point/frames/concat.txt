@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-1.png'
+duration 20.16
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-2.png'
+duration 21.672
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-3.png'
+duration 28.032
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-4.png'
+duration 20.544
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-5.png'
+duration 16.44
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-6.png'
+duration 18.024
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module08-fixed-point/frames/slide-6.png'

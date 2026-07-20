@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-1.png'
+duration 18.48
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-2.png'
+duration 20.76
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-3.png'
+duration 20.52
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-4.png'
+duration 17.088
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-5.png'
+duration 17.304
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-6.png'
+duration 17.568
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module12-boolean-laws/frames/slide-6.png'

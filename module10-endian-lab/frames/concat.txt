@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-1.png'
+duration 21.288
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-2.png'
+duration 24.144
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-3.png'
+duration 29.64
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-4.png'
+duration 19.56
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-5.png'
+duration 18.744
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-6.png'
+duration 18.216
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module10-endian-lab/frames/slide-6.png'

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-1.png'
+duration 19.464
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-2.png'
+duration 19.488
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-3.png'
+duration 25.92
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-4.png'
+duration 18.504
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-5.png'
+duration 18.504
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-6.png'
+duration 17.304
+file '/mnt/d/proj/designs/learning/courses/learn_digital/module09-bit-fields/frames/slide-6.png'

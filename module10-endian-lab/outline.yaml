@@ -1,0 +1,66 @@
+title: Endian packing
+footer: learn_digital — endian lab
+slides:
+- type: title
+  title: Endian packing
+  subtitle: The same integer can sit in memory two ways
+  notes: The same integer can sit in memory two ways. Little-endian puts the LSB at
+    the lowest address; big-endian puts the MSB there. Network byte order is usually
+    big-endian. Endianness does not change the integer value—it changes how bytes
+    are laid out in RAM. This module makes pack and unpack concrete.
+- type: bullets
+  title: Unpack, pack, swap
+  bullets:
+  - Unpack splits a word into bytes in address order for the chosen mode
+  - Pack builds the word from bytes at plus zero through plus three
+  - Byte-swap reverses the four bytes in the word
+  - Compare LE versus BE when you want the side-by-side picture
+  - BE puts one-two first
+  notes: Unpack splits a word into bytes in address order for the chosen mode. Pack
+    builds the word from bytes at plus zero through plus three. Byte-swap reverses
+    the four bytes in the word. Compare LE versus BE when you want the side-by-side
+    picture. For hex one-two-three-four-five-six-seven-eight, LE bytes at plus zero
+    are seven-eight five-six three-four one-two; BE puts one-two first.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Endian lab starter
+  notes: 'In the browser lab, look at three pieces: the challenge panel, the word
+    and byte-at-address views, and Unpack, Pack, or Swap controls. Load the starter
+    word hex one-two-three-four-five-six-seven-eight. Unpack in little-endian and
+    confirm bytes seven-eight five-six three-four one-two. Switch to big-endian and
+    compare layouts. Try pack from memory bytes or byte-swap to hex seven-eight-five-six-three-four-one-two.
+    Use Check when a challenge looks done.'
+- type: bullets
+  title: Workbook practice
+  bullets:
+  - In the workbook track, take word one-two-three-four-five-six-seven-eight
+  - Write LE and BE byte order at addresses plus zero through plus three
+  - Pack LE bytes A-A B-B C-C D-D and check you get D-D C-C B-B A-A
+  - 'Note one pitfall: assuming host endian always matches the wire or the spec'
+  notes: 'In the workbook track, take word one-two-three-four-five-six-seven-eight.
+    Write LE and BE byte order at addresses plus zero through plus three. Pack LE
+    bytes A-A B-B C-C D-D and check you get D-D C-C B-B A-A. Note one pitfall: assuming
+    host endian always matches the wire or the spec.'
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not confuse byte order with bit order inside a byte
+  - Mixing LE and BE across a bus without conversion corrupts multi-byte fields
+  - 'And remember: the browser lab is literacy'
+  - Real SoCs still need explicit endian policy on DMA, registers, and network frames
+  notes: 'Do not confuse byte order with bit order inside a byte. Mixing LE and BE
+    across a bus without conversion corrupts multi-byte fields. And remember: the
+    browser lab is literacy. Real SoCs still need explicit endian policy on DMA, registers,
+    and network frames.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track, preferably both
+  - In the browser, finish a few challenges after the starter
+  - On paper, unpack one word both ways and pack one byte sequence
+  - When you are ready, take the short quiz, then continue to truth tables
+  notes: Complete the checklist for at least one track—preferably both. In the browser,
+    finish a few challenges after the starter. On paper, unpack one word both ways
+    and pack one byte sequence. When you are ready, take the short quiz, then continue
+    to truth tables.

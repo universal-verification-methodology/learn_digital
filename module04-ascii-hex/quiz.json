@@ -1,0 +1,53 @@
+{
+  "module": "module04-ascii-hex",
+  "title": "ASCII / hex dump check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Printable ASCII typically starts at which hex value (space)?",
+      "choices": [
+        "0x00",
+        "0x0A",
+        "0x20",
+        "0x7F"
+      ],
+      "answer": 2,
+      "explain": "Space is 0x20; that is the usual start of printable ASCII."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Newline (LF) is which byte?",
+      "choices": [
+        "0x0D only",
+        "0x0A",
+        "0x20",
+        "0xFF"
+      ],
+      "answer": 1,
+      "explain": "LF is 0x0A (CR is 0x0D)."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "A C string terminator is…",
+      "choices": [
+        "0x20",
+        "0x0A",
+        "0x00",
+        "0xFF"
+      ],
+      "answer": 2,
+      "explain": "NUL (0x00) terminates a C string."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Hex dumps often show non-printable bytes as a dot in the ASCII column.",
+      "answer": true,
+      "explain": "Dots keep column alignment when a glyph is unavailable."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "module": "module09-bit-fields",
+  "title": "Bit-fields check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "Field width for [hi:lo] is…",
+      "choices": [
+        "hi-lo",
+        "hi-lo+1",
+        "hi+lo",
+        "2^(hi-lo)"
+      ],
+      "answer": 1,
+      "explain": "Inclusive slice: w = hi − lo + 1."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Extract typically ends with…",
+      "choices": [
+        "<< lo",
+        ">> lo",
+        "& lo",
+        "| lo"
+      ],
+      "answer": 1,
+      "explain": "Mask then shift right by lo to align the field."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Before OR on insert, clear the old field with…",
+      "choices": [
+        "mask",
+        "~mask",
+        "lo",
+        "hi"
+      ],
+      "answer": 1,
+      "explain": "AND with ~mask clears the slice; then OR the new bits."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "In this lab, bit 0 is the LSB.",
+      "answer": true,
+      "explain": "Bit numbering is LSB = 0."
+    }
+  ]
+}
