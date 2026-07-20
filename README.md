@@ -89,7 +89,7 @@ Every **lab** module documents both tracks. Intro/wrap have no lab. Details: [do
 | **A — Workbook** | Paper / sketches + `EXAMPLES.md` | [docs/TWO_TRACKS.md](docs/TWO_TRACKS.md) |
 | **B — Browser lab** | Platform tools | [local](http://127.0.0.1:8080/tools/) · [live](https://universal-verification-methodology.github.io/learning/tools/) |
 
-Lab status snapshot: **46 shipped** · **3 planned** (see [docs/MODULES.md](docs/MODULES.md)).
+Lab status snapshot: **49 shipped** · **51 modules with media** (see [docs/MODULES.md](docs/MODULES.md)).
 
 ## Module landings
 
