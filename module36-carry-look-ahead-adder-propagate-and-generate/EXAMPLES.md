@@ -10,4 +10,4 @@ Track A (workbook). No mandatory HDL trees — stay concept-first.
 
 ## Stretch (optional)
 
-Peek at [`../learn_digital_verilog/`](../learn_digital_verilog/) only if you want a Verilog preview — not required for **learn_digital**.
+Peek at this module’s `examples/` only if you want a Verilog preview — not required for **learn_digital**.

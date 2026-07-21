@@ -15,12 +15,12 @@
 
 You can do **A only**, **B only**, or **both** (recommended: B for intuition, then A to harden the idea).
 
-HDL coding lands in **learn_verilog** / **learn_systemverilog**. Legacy combined path: [`../learn_digital_verilog/`](../learn_digital_verilog/).
+HDL coding lands in **learn_verilog** / **learn_systemverilog**. 
 
 ## Setup (Track A)
 
 1. Notebook or tablet for truth tables, timing sketches, and encodings.
-2. Optional: skim [`../learn_digital_verilog/`](../learn_digital_verilog/) only as stretch — not required here.
+2. Optional: skim this module’s `examples/` only as stretch — not required here.
 
 ## Setup (Track B)
 

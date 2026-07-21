@@ -157,4 +157,4 @@ Follow modules 01–49 in [docs/MODULES.md](docs/MODULES.md). Primary path: [rad
 
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see [`LICENSE`](LICENSE).
 
-Concept path split from [`learn_digital_verilog`](https://github.com/universal-verification-methodology/learn_digital_verilog). Platform tools and the parent monorepo may carry additional notices.
+Concept path split from [`learn_digital`](https://github.com/universal-verification-methodology/learn_digital). Platform tools and the parent monorepo may carry additional notices.

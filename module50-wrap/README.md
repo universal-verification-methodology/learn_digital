@@ -18,7 +18,7 @@ If you mainly used **workbook**, open any skipped browser labs for interactive c
 ## Next course
 
 → **learn_verilog** (syllabus: [../../syllabus.md](../../syllabus.md#4-learn_verilog))  
-Legacy combined path: [`../learn_digital_verilog/`](../learn_digital_verilog/).
+
 
 ## Media
 
